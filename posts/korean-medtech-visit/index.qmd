@@ -1,0 +1,96 @@
+---
+title: "Exploring AI Innovation in Healthcare: Site Visits to VUNO, AITRICS, and Standigm in Seoul"
+author: "TW"
+date: "2025-03-28"
+categories: [work]
+draft: true
+---
+
+# Exploring AI Innovation in Healthcare: Site Visits to VUNO, AITRICS, and Standigm in Seoul  
+*Date: August 24–25, 2023*  
+*Location: Seoul, South Korea*  
+
+During my attendance at the ISQua 2023 conference in Seoul, I had the opportunity to visit three pioneering South Korean companies at the forefront of artificial intelligence (AI) in healthcare: VUNO, AITRICS, and Standigm. These site visits offered a firsthand look at how AI is transforming medical diagnostics, patient care, and drug discovery. My handwritten notes, scribbled on company brochures and documents, capture the essence of their technologies, challenges, and aspirations. Below, I’ve organized my observations into a detailed blog, reflecting on the innovative work these companies are doing and the questions they sparked about the future of AI in healthcare.
+
+---
+
+## VUNO: Revolutionizing Medical Diagnostics with AI-Powered Imaging and Predictive Tools  
+
+### Overview of VUNO  
+VUNO, a global leader in medical AI, was the first stop on my tour. Founded in 2014, VUNO has made significant strides in developing and commercializing AI deep learning solutions, with a mission to improve quality of life by leveraging medical data like bio-signals, imaging, and digital pathology. The company was the first in Korea to gain FDA/MFDS (Ministry of Food and Drug Safety) approval for medical AI software, a milestone that underscores its pioneering role. With a presence in over 500 hospitals worldwide and a robust R&D track record, VUNO is a heavyweight in the global medical AI arena.
+
+### VUNO’s AI Solutions: A Comprehensive Suite  
+VUNO’s portfolio is impressive, spanning medical imaging, diagnostics, and predictive analytics. Their flagship products include:  
+- **VUNO Med®-DeepBrain®:** Analyzes brain MRI to quantify atrophy in neurodegenerative diseases, providing percentile values compared to age-matched norms. This tool is crucial for early detection of conditions like Alzheimer’s.  
+- **VUNO Med®-LungCT AI™:** Detects pulmonary nodules in chest CT scans, optimizing detection and enhancing CT scores for better lung cancer diagnosis.  
+- **VUNO Med®-Chest X-ray™:** Flags abnormalities in chest X-rays (e.g., atelectasis, calcification, cardiomegaly) with high accuracy, improving radiologist efficiency.  
+- **VUNO Med®-BoneAge™:** Assesses bone age via hand X-rays, providing results within seconds—a Korea-first for AI-based bone age assessment.  
+- **VUNO Med®-Fundus AI™:** Detects retinal abnormalities (e.g., hemorrhage, drusen, hard exudate) in fundus images, aiding in early diagnosis of ocular diseases.  
+- **VUNO Med®-DeepCARS™:** Monitors cardiac arrest risk through vital signs, alerting clinicians to emergencies like arrhythmia or acute myocardial infarction.  
+- **VUNO Med®-DeepECG™:** Analyzes ECGs for cardiovascular and kidney disease detection, identifying issues like hyperkalemia and heart failure.  
+
+### Collaboration and Impact  
+VUNO’s regulatory approvals for Software as a Medical Device (SaMD) highlight its integration into clinical workflows. I noted their work with over 500 hospitals, a testament to their scalability. Their solutions aim to:  
+- Improve diagnostic accuracy (e.g., reducing false negatives in chest X-rays).  
+- Enhance radiologist efficiency (e.g., faster reading times).  
+- Support early intervention (e.g., detecting lung nodules or brain atrophy).  
+
+### Reflections  
+VUNO’s suite of tools is a game-changer for diagnostics, particularly in imaging-heavy specialties like radiology and cardiology. Their focus on early detection aligns with global health priorities, but questions about false negatives and data specificity linger. I left impressed by their global reach and eager to see how their solutions evolve, especially in pediatric and rural settings.
+
+---
+
+## AITRICS: Predictive AI for Critical Care and Patient Safety  
+
+### Overview of AITRICS  
+Next, I visited AITRICS, a company pushing the boundaries of AI in critical care. Founded in 2015, AITRICS focuses on predictive analytics to save lives and improve workflows for medical staff. Their mission is to utilize AI to detect and predict patient deterioration early, particularly in high-stakes environments like ICUs, general wards, and emergency rooms.
+
+### AITRICS’ AI Solutions: VitalCare and Beyond  
+AITRICS’ flagship product, **AITRICS-VC (VitalCare)**, predicts patient deterioration using AI-based medical devices. It integrates with electronic health records (EHRs) to monitor vital signs, blood tests, and Glasgow Coma Scale data in real time. The system supports scoring tools like:  
+- **MEWS (Modified Early Warning Score):** Assesses six parameters (heart rate, respiratory rate, temperature, blood pressure, mental status, urine output) to flag deterioration.  
+- **NEWS (National Early Warning Score):** Uses similar metrics, adjusted for hospital settings, to predict adverse events.  
+- **q-SOFA (Quick Sequential Organ Failure Assessment):** Identifies sepsis risk.  
+- **SOFA (Sequential Organ Failure Assessment):** Evaluates organ dysfunction.  
+- **APACHE II (Acute Physiology and Chronic Health Evaluation II):** Scores ICU patients for severity of disease.  
+
+AITRICS-VC predicts risks like:  
+- Sepsis, major adverse events (CPR, unexpected ICU transfer, mortality).  
+- Acute kidney injury, pulmonary embolism, department expansion needs.  
+
+The system’s integration with EHRs allows real-time data access on hospital PCs, enabling early warnings via single-screen views of MEWS, NEWS, q-SOFA, SOFA, and APACHE II scores. This helps medical staff:  
+- Improve diagnostic accuracy.  
+- Increase bed turnover rates.  
+- Reduce mortality through proactive interventions.  
+- Enhance staff efficiency in emergencies.  
+
+### Reflections  
+AITRICS-VC is a powerful tool for critical care, offering a lifeline in high-pressure settings. Its integration with EHRs and focus on early warning scores like MEWS and NEWS could transform patient outcomes, especially for sepsis. However, I left with questions about their algorithm’s transparency, regulatory specifics, and long-term training support. Their real-world impact—reducing ICU transfers—is compelling, but I’d love to see more detailed case studies.
+
+---
+
+## Standigm: AI-Driven Drug Discovery for a New Era  
+
+### Overview of Standigm  
+My final visit was to Standigm, a company revolutionizing drug discovery through AI. Founded in 2015, Standigm has developed a workflow AI platform to generate first-in-class lead compounds within seven months. Their mission is to industrialize drug discovery, pursuing full-stack, AI-driven solutions through platforms like **DarkMolFactory™** (molecular design), **Standigm ASK™** (target discovery), **Standigm BEST™** (lead design), and **Standigm Insight™** (drug repurposing). With expertise in biology, pharmacology, AI, and data science, Standigm aims to develop commercially valuable drugs via in-house and partnership projects.
+
+### Standigm’s AI Workflow: From Target to Lead  
+Standigm’s workflow is a marvel of AI integration:  
+- **Standigm ASK™:** Identifies novel targets for diseases using customizable machine learning. It draws insights from literature and public databases, offering a comprehensive collection of state-of-the-art knowledge.  
+- **Standigm BEST™:** Designs lead compounds in an average of seven months, optimizing workflows with AI-generated target structures.  
+- **Standigm Insight™:** Repurposes existing drugs for new therapeutic uses, analyzing potential interactions.  
+- **DarkMolFactory™:** Automates molecular design, enhancing efficiency in lead generation.  
+
+Standigm’s approach includes:  
+- **Customized Target Identification:** ASK draws proteins to modulate diseases, identifying novel targets.  
+- **First-in-Class Leads:** BEST generates leads quickly, often within seven months, a fraction of traditional timelines (5–10 years).  
+- **Asset Catalog:** A ready-made therapeutic asset catalog reinforces pipelines for commercialization.  
+
+### Reflections  
+Standigm’s AI-driven drug discovery is a bold step toward faster, more efficient pharmaceutical development. Their seven-month lead generation timeline is revolutionary, and their focus on rare diseases addresses a critical gap. However, my questions about ethics, regulatory compliance, and data privacy highlight the challenges of scaling AI in this space. Their integration of tools like AlphaFold and LLMs signals a forward-thinking approach, but I’d love to see more on real-world outcomes and patient impact.
+
+---
+
+## Final Thoughts: The Future of AI in Healthcare  
+Visiting VUNO, AITRICS, and Standigm during ISQua 2023 was a deep dive into the transformative power of AI in healthcare. VUNO’s imaging and predictive tools are redefining diagnostics, AITRICS’ VitalCare is saving lives in critical care, and Standigm’s drug discovery platform is accelerating the path to new therapies. Yet, each company faces challenges—false negatives, regulatory hurdles, ethical concerns—that remind us AI is a tool, not a panacea. My notes are filled with questions, reflecting both the promise and the complexity of this field. As I left Seoul, I felt inspired by these innovators but eager to see how their technologies will evolve to meet the needs of patients, clinicians, and researchers worldwide.
+
+--- 

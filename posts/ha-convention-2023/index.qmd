@@ -1,0 +1,94 @@
+---
+title: "HA Convention 2023: A Glimpse into the Future of Healthcare"
+author: "TW"
+date: "2025-03-28"
+categories: [work]
+---
+
+# HA Convention 2023: A Glimpse into the Future of Healthcare
+
+In May 2023, I attended the HA Convention 2023, an inspiring gathering of healthcare professionals, innovators, and thought leaders. The event was packed with insights on quality, safety, innovation, and the future of global healthcare. Below are my reflections and key takeaways, organized for my future reference.
+
+---
+
+## Quality and Safety: The Heart of Healthcare
+The convention kicked off with a strong focus on **quality and safety**, emphasizing their role as foundational pillars in healthcare delivery. Five innovative solutions were highlighted:
+- **Shift Left, Stay Left**: Proactive care to prevent issues early.
+- **Right Place, Right Time, Right People**: Ensuring resources align perfectly with patient needs.
+- **High Quality and Low Cost**: Balancing excellence with affordability.
+
+A memorable framework introduced was the **60:30:10 rule**—three numbers representing quality, waste, and harm. It’s a stark reminder that 60% of efforts should focus on quality, 30% on reducing waste, and 10% on minimizing harm. This simple yet powerful metric stuck with me as a way to measure healthcare efficiency.
+
+---
+
+## High-Performance Healthcare in Overstretched Systems
+The discussion on **high-performance hospitals** was eye-opening, especially for overstretched systems. The concept of a **Centre of Excellence** emerged as a beacon of hope—specialized hubs delivering top-tier care despite resource constraints. It’s a model worth exploring further.
+
+---
+
+## The Future of Healthcare: A Vision for 2030
+A major highlight was the session on **the future of healthcare by 2030**, part of a series on international reform. Predictions for global health systems included:
+- **Sustainability**: Eco-friendly practices in healthcare delivery.
+- **Genomics**: Personalized medicine driven by genetic insights.
+- **Emerging Tech**: AI, robotics, and beyond transforming care.
+- **Global Demographics**: Adapting to aging populations and shifting needs.
+- **New Models of Care**: Innovative frameworks to meet future demands.
+
+Specific examples like **HKSTP** (Hong Kong Science and Technology Parks) showcased advancements in **medical imaging** and **telehealth**, signaling a tech-driven future.
+
+---
+
+## Patient Safety: From Culture to Innovation
+Patient safety took center stage with the mantra **"Quality and Safety (QnS) is a culture supported by robust infrastructure."** Building trust through a quality system was a recurring theme. Key points included:
+- **Cap 633 Private Hospital Ordinance**: Regulatory frameworks enhancing safety.
+- **ISQuaEEA Accreditation**: International standards fostering connectivity.
+- **National 3A Hospital & SHARC**: Shenzhen Hospital Accreditation Research Centre driving research and standards.
+
+Professor **Jeffrey Braithwaite**, ISQua President, delivered a compelling talk on moving **from Safety I to Safety II**:
+- **Safety I**: Preventing things from going wrong (e.g., Swiss cheese theory, root cause analysis).
+- **Safety II**: Ensuring things go right, embracing resilient healthcare.
+- **10% Harm**: Adverse cases remain a challenge, pushing the need for new ideas.
+
+He emphasized **implementation science** and scaling innovations, noting that healthcare is a **complex adaptive system**. Both Safety I and II are essential for progress.
+
+---
+
+## Practical Care and Ethical Considerations
+The convention also touched on hands-on care practices:
+- **Careful Hand Feeding**: A reminder of compassionate care.
+- **Advanced Directives & Ryle’s Tube Feeding (RT)**: Ethical and practical considerations for end-of-life care.
+
+---
+
+## Beyond Clinical Care: Legal and Regulatory Insights
+Legal and regulatory discussions were surprisingly engaging:
+- **Complaint Response**: Steps like initial apologies, detailed investigations, and clear chronologies.
+- **Inquests**: Advising on statements, evidence, and legal representation.
+- **Disciplinary Cases**: Addressing risks like inappropriate sexual contact or gross negligence manslaughter, with a focus on reflection and remediation.
+- **Criminal Matters**: Importance of consent, chaperones, record-keeping, and professional boundaries.
+
+**Clinical guidelines** (e.g., NICE) were framed as evidence-based medicine’s backbone. Deviating from them requires solid justification—a key takeaway for trial strategies.
+
+---
+
+## Operation Readiness: Building Hospitals for Day 1
+The **Arup Hospital Development Project** session on **Operational Readiness, Activation, and Transition (ORAT)** was a practical gem. It’s all about de-risking hospital launches:
+- **Process, People, Facilities, Systems**: Four pillars of readiness.
+- **Transformational Change**: Connected leadership and stakeholder teamwork.
+- **ORAT Blueprint**: Preparing people, defining processes, activating systems, and transitioning smoothly.
+
+Tips included starting early, setting expectations, and using a risk-based approach to prioritize the critical path. Iterative trials and feedback loops were emphasized as game-changers.
+
+---
+
+## Sustainable Campus Transition
+The convention closed with a look at **sustainable campus transitions**:
+- **Master Planning**: Feasibility studies, strategic baselines, and comprehensive masterplans.
+- **The Solution Depends on the Question**: A reminder to tailor approaches to specific challenges.
+
+---
+
+## Final Thoughts
+The HA Convention 2023 was a whirlwind of ideas, from patient safety innovations to operational readiness and the healthcare landscape of 2030. It left me with a renewed appreciation for the complexity and potential of this field. I’ll be revisiting these notes as I reflect on how to apply these insights in my own work.
+
+---

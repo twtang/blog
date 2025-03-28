@@ -1,0 +1,255 @@
+---
+title: "An In-Depth Journey Through ISQua 2023: Unveiling Healthcare Quality, Innovation, and Global Challenges"
+author: "TW"
+date: "2025-03-28"
+categories: [work]
+---
+
+# An In-Depth Journey Through ISQua 2023: Unveiling Healthcare Quality, Innovation, and Global Challenges  
+*Date: August 27–30, 2023*  
+*Location: Seoul, South Korea*  
+
+From August 27 to 30, 2023, I attended the International Society for Quality in Health Care (ISQua) conference in Seoul, a dynamic city that perfectly mirrored the energy of the discussions. Over four intense days, I filled pages with notes as healthcare leaders, researchers, and innovators from around the world shared their insights on quality improvement, patient safety, technological advancements, and the pressing intersection of healthcare with global issues like climate change. This blog transforms those scribbled observations into a detailed narrative, capturing the essence of Korea’s healthcare triumphs, cutting-edge tools like AI, and ambitious visions for a learning health system. Here’s an exhaustive recounting of my experience.
+
+---
+
+## Day 1: Sunday, August 27 – Laying the Foundation: Korea’s Healthcare Landscape and Quality Frontiers  
+
+### Morning Sessions: Frontiers in Quality of Healthcare in Korea  
+
+The conference launched with a deep exploration of Korea’s healthcare system, a remarkable case study of transformation from a post-war, resource-poor nation to a global leader in universal health coverage and quality care. The morning sessions were a masterclass in national and hospital-level strategies, delivered by some of Korea’s most prominent healthcare figures.
+
+#### Sang Il Lee (University of Ulsan, KoSQua): A National Perspective on Quality  
+Sang Il Lee, a professor at the University of Ulsan and a driving force behind the Korean Society for Quality in Healthcare (KoSQua), opened the day with a sweeping overview. He framed Korea’s healthcare system through the lens of the “iron triangle”—cost, access, and quality—a conceptual model that underscores the trade-offs inherent in any health system. Korea, he argued, has navigated this triangle with remarkable success through its social healthcare system, anchored by the National Health Insurance (NHI). Introduced in 1977 and expanded to universal coverage by 1989, the NHI is a single-payer system that ensures every one of Korea’s 51 million citizens has access to care.  
+
+Lee highlighted the system’s achievements: six Korean hospitals—such as Severance Hospital, Asan Medical Centre, and Samsung Medical Centre—rank among the world’s best, according to metrics like Newsweek’s annual hospital rankings. This places Korea at an OECD-level standard, a feat he attributed to decades of deliberate policy and investment. Central to this success are three key players:  
+- **KoSQua:** A professional society founded to elevate healthcare quality through research, education, and collaboration.  
+- **HIRA (Health Insurance Review and Assessment Service):** An independent agency established in 2000 to review insurance claims, ensuring cost-effectiveness and quality.  
+- **KOIHA (Korean Institute of Healthcare Accreditation):** A body tasked with accrediting hospitals to maintain high standards, launched in 2010.  
+
+Lee’s narrative was one of resilience: Korea’s journey from a GDP per capita of $79 in 1960 to over $33,000 by 2023 mirrors its healthcare ascent. He emphasized that this wasn’t just about infrastructure but about embedding quality into the system’s DNA—a theme that resonated throughout the day.
+
+#### Jin Yong Lee (HIRA, Seoul National University): Korea as a Global Benchmark  
+Next, Jin Yong Lee, affiliated with both HIRA and Seoul National University, drilled into the mechanics of Korea’s healthcare financing and quality oversight. He painted a vivid picture of the NHI Service (NHIS) as the “big brother”—a mandatory, single-payer system that collects premiums from citizens and employers, pooling funds to cover the population. HIRA, meanwhile, operates as an independent watchdog, reviewing claims to prevent overuse, ensure appropriateness, and maintain quality. This separation of roles—NHIS as insurer, HIRA as reviewer—creates a checks-and-balances dynamic that Lee deemed critical.  
+
+HIRA’s toolkit is impressive: a fully digitalized system tracks healthcare utilization, conducts National Drug Utilization Reviews (DUR) to optimize prescribing, and runs the National Quality Assessment Program to benchmark performance. Lee sketched a stakeholder triangle—Providers (hospitals and clinics), Patients, NHIS, and HIRA—where premiums and copayments (typically 20–30% of costs) drive funding. He outlined seven elements of healthcare quality, likely aligned with WHO standards: safety, effectiveness, patient-centeredness, timeliness, efficiency, equity, and integration. HIRA’s influence spans four domains:  
+1. **Primary care and non-communicable diseases (NCDs):** Addressing chronic conditions like diabetes and hypertension, which account for 80% of Korea’s disease burden.  
+2. **Acute care:** Ensuring rapid, effective responses to emergencies.  
+3. **Mental health:** A growing priority as stigma decreases and demand rises.  
+4. **Long-term care:** Supporting an aging population (14% over 65 in 2023, projected to hit 20% by 2030).  
+
+Innovations stole the spotlight:  
+- **Patient-Reported Experience Measures (PREMs):** Surveys capturing patient perspectives on care delivery.  
+- **Pay-for-Performance (P4P):** Economic incentives tied to quality metrics, piloted by HIRA since 2007.  
+- **Drug Utilization Review (DUR):** A real-time system flagging inappropriate prescriptions, reducing errors and costs.  
+
+Yet, challenges loomed large: regional disparities (urban Seoul vs. rural areas), privacy and data security in a digital age, public mistrust of institutions, and the shift to value-based payments, where outcomes trump volume. Lee positioned Korea as a benchmark, but one still grappling with evolution.
+
+#### In Sun Hwang (KOIHA): Accreditation as a Pillar of Safety and Quality  
+In Sun Hwang from KOIHA shifted the focus to hospital accreditation, a cornerstone of Korea’s quality framework. Accreditation is voluntary for most facilities but mandatory for long-term care institutions, reflecting the needs of an aging society. KOIHA’s mission is twofold: enhance patient safety and drive continuous quality improvement. Hwang proudly noted that 100% of tertiary general hospitals—those with advanced specialties like neurosurgery and cardiology—are accredited, a milestone achieved through rigorous standards and site visits.  
+
+The primary value, she explained, lies in three areas:  
+- **Patient care:** Ensuring safe, effective treatment.  
+- **Quality improvement:** Encouraging hospitals to adopt best practices.  
+- **Performance monitoring:** Tracking outcomes to identify gaps.  
+
+But the road isn’t smooth. Hwang outlined key challenges:  
+- **Activating the system:** Ensuring hospitals actively engage rather than treat accreditation as a checkbox.  
+- **Effectiveness and reliability:** Refining standards to reflect real-world impact.  
+- **Competitiveness:** Aligning with global benchmarks like Joint Commission International (JCI).  
+
+She then dove into the Patient Safety Act of 2016, a legislative game-changer. It mandates:  
+- Dedicated patient safety personnel in every hospital.  
+- Compulsory reporting of incidents (e.g., medication errors, falls).  
+- A comprehensive safety plan tailored to each facility.  
+
+A standout initiative was “Medication Without Harm,” part of WHO’s Global Patient Safety Challenge launched in 2017. With medication errors causing 1 in 10 adverse events globally, Korea’s focus on safe prescribing and administration—through training, protocols, and technology—struck me as a model worth emulating.
+
+#### Gi Beom Kim (Seoul National University Hospital): Quality Improvement at the Coalface  
+Gi Beom Kim from Seoul National University Hospital (SNUH), a 1,700-bed academic powerhouse, brought the discussion to the hospital level. SNUH’s quality improvement (QI) efforts hinge on clinical indicators—metrics like infection rates or readmissions—and clinical pathways (CPs), standardized protocols ensuring consistent care. These tools enhance user convenience, reducing variability for patients and staff alike.  
+
+Kim introduced SNUH’s SPIRIT framework, an acronym encapsulating their QI philosophy:  
+- **Servant:** Putting patients first.  
+- **Proactive:** Anticipating needs.  
+- **Innovative:** Embracing new solutions.  
+- **Rational:** Grounding decisions in evidence.  
+- **Initiative:** Encouraging staff ownership.  
+- **Transformative:** Driving systemic change.  
+
+Two examples stood out:  
+1. **Pediatric sedation treatment system:** SNUH overhauled sedation processes, improving safety and efficacy for young patients undergoing procedures like MRI scans.  
+2. **ICU patient experience:** During COVID-19, they standardized contactless visiting (e.g., video calls) and pre-notification systems, informing families of critical updates. These reduced stress and improved satisfaction, a poignant reminder of QI’s human impact.  
+
+Kim’s session was a practical bridge between policy and practice, showing how national goals trickle down to bedside care.
+
+#### Sung Moon Jeong (Asan Medical Centre): A Legacy of Quality Innovation  
+Sung Moon Jeong from Asan Medical Centre (AMC), a sprawling 2,700-bed facility under the Asan Foundation, shared a story of pioneering excellence. AMC established Korea’s first QI team in 1993, a bold move that set the stage for decades of progress. Their Performance Improvement (PI) approach targets three pillars: quality (better outcomes), efficiency (streamlined processes), and speed (faster care delivery).  
+
+Clinical pathways (CPs) are AMC’s backbone, providing evidence-based, standardized care. Jeong focused on the Division of Liver Transplantation and Hepatobiliary Surgery, a global leader handling complex cases like hepatic lobectomy for malignant cancer. Procedures are guided by:  
+- **Diagnosis-Related Groups (DRGs):** Payment models incentivizing efficiency.  
+- **Liver Transplantation Surgery (LTS):** A high-stakes specialty where AMC excels.  
+- **Transarterial Chemoembolization (TACE):** A targeted cancer therapy.  
+
+Development teams craft these pathways, using selection criteria (e.g., prevalence, cost, variability) to prioritize conditions. Outcomes are tangible:  
+- **Medication administration safety:** Standardized protocols cut errors.  
+- **Application and effectiveness:** CPs improve survival rates and recovery times.  
+- **Outpatient exam preparation:** Faster, smoother processes boost satisfaction.  
+
+Jeong’s pride in AMC’s legacy—built by founder Ju-Yung Chung’s vision of affordable, world-class care—was palpable. It’s a reminder that QI isn’t just technical; it’s cultural.
+
+#### Jun Haeng Lee (Samsung Medical Centre): Culture as the Bedrock of Quality  
+Jun Haeng Lee from Samsung Medical Centre (SMC), a 1,900-bed titan, argued that “culture matters” in quality improvement. SMC conducts patient safety rounds 1–2 times monthly, a hands-on ritual where leaders walk wards, spot risks, and engage staff. These feed into preparations for Patient Safety Reporting Systems (PRS), a digital platform for tracking incidents.  
+
+Clinical pathways dominate SMC’s approach:  
+- **General CPs:** Broad protocols for common conditions.  
+- **Event CPs:** Tailored to specific incidents (e.g., post-surgical infections).  
+- **Inpatient and Outpatient CPs:** Covering the care continuum.  
+
+Lee’s mantra—“standardization is the beginning of quality improvement”—rang true. Exceptions are minor; the default is a single, unified protocol. This “control first, improve later” philosophy ensures consistency before tweaking. Communication between doctors and nurses, often a weak link elsewhere, is a strength here, bolstered by task-and-time frameworks and a “best-in-class” mindset.  
+
+The future? Digital transformation. Lee envisioned robotic technology revolutionizing logistics (e.g., supply delivery), treatment spaces (e.g., surgical precision), and resource allocation. SMC’s Central and Regional Patient Safety Centres use Failure Mode and Effects Analysis (FMEA)—a proactive risk assessment tool—to prioritize safety. Symposiums and cultural shifts reinforce that patient safety is “top priority,” a message echoing through SMC’s halls.
+
+#### Chang Eun Song (Myongji Hospital): Resilience Amid Pandemics  
+Chang Eun Song from Myongji Hospital, a private facility with 500+ beds, offered a gripping account of managing government-designated negative pressure rooms during H1N1 (2009), MERS (2015), and COVID-19 (2020–2023). These isolation units, critical for infectious diseases, thrust Myongji into the frontline. The emotional toll was stark: staff and patients grappled with anger, fear, anxiety, sadness, disgust, shame, guilt, and stress—negative emotions Song dubbed “COVID Blue.”  
+
+Myongji’s response was multifaceted:  
+- **COVID Blue Support Team:** A collaboration between psychiatry, the Centre of Art Healing (using creative therapies), and nursing to address mental health.  
+- **Regular surveys:** Monitoring staff and patient well-being, a data-driven approach to resilience.  
+- **RISE Program (Resilience in Systemic Empathy):** A structured initiative fostering communication despite social distancing, blending systemic support with empathy.  
+
+Transparency—sharing infection data and response plans—built trust. Song’s session was a raw, human counterpoint to the morning’s technical focus, highlighting healthcare’s emotional undercurrents.
+
+### Afternoon Session: The Learning Health System – A Vision for the Future  
+
+#### Jeffrey Braithwaite: Implications for Quality of Care  
+The afternoon pivoted to the Learning Health System (LHS), led by Jeffrey Braithwaite, a professor at Macquarie University and ISQua luminary. Post-COVID challenges—resource scarcity, workforce burnout, and knowledge gaps—framed his talk. He released an LHS toolkit, a practical guide for systems to evolve by learning from data. ISQua’s role? Building a “Knowledge Network Voice” through collaboration.  
+
+LHS core values include:  
+- **Person-focused privacy:** Protecting patient data.  
+- **Inclusiveness and transparency:** Engaging all stakeholders.  
+- **Accessibility and adaptability:** Ensuring care reaches everyone, everywhere.  
+- **Governance and leadership:** Strong oversight.  
+- **Scientific integrity and value:** Evidence-based progress.  
+
+Healthcare generates massive information—electronic records, wearables, claims data—yet Braithwaite cited a stark statistic: 60% quality care, 30% waste, 10% harm (aligned with OECD estimates). LHS aims to close this gap via a “knowledge pipeline,” translating data into practice. He questioned linearity—pipelines suggest order, but healthcare is complex, with “populations of agents” (doctors, patients, systems) interacting dynamically, governed by emergent rules.  
+
+Examples included:  
+- **Translational Cancer Research Network (TCRN):** An Australian initiative linking research to care.  
+- **Australian Genomics:** Integrating genomic data into clinical practice.  
+
+A Dutch perspective via Nivel’s primary care database added depth, linking patient and supply data to demographics and environmental factors (e.g., housing, climate). Braithwaite’s 7-step process from data to learning—collection, analysis, knowledge, application, evaluation, feedback, iteration—underpinned LHS’s cycle of science, informatics, incentives, and culture. Case studies like the Veterans Health Administration (VHA), Ottawa Hospital, and MQ Health showcased individual, worker, and system competencies, with global collaboration as the glue.
+
+---
+
+## Day 2: Monday, August 28 – Technology, Patient Safety, and Global Imperatives  
+
+### Morning Sessions: Opening Ceremony and Keynote Addresses  
+
+#### Opening Ceremony (09:00)  
+The day began with a formal opening at 9:00 AM. ISQua’s Jeffrey Braithwaite welcomed attendees, joined by KoSQua’s Wang Jun Lee and HIRA’s Jung Gu Kang. Themes of technology, culture, and coproduction set the tone. The Ministry of Health and Welfare (MoHW) traced Korea’s quality journey to 1976, when the Medical Service Act laid legal foundations for improvement, a nod to the nation’s long-term vision.
+
+#### Keynote: Ban Ki Moon – Climate Change and Healthcare  
+Former UN Secretary-General Ban Ki Moon took the stage with a keynote that felt like a global wake-up call. He described a “rapidly changing world” of “global boiling”—a term he coined to replace “global warming”—marked by temperature surges, biodiversity loss, and pandemics like SARS, Ebola, and COVID-19, all tied to environmental damage from animals to humans. “We don’t have a Plan B because we don’t have a Planet B,” he declared, echoing his Paris Agreement advocacy.  
+
+The IPCC’s timeline loomed: seven years to limit warming to 1.5°C, per their 2023 report. Health, enshrined in UN SDG #3 (good health and well-being), faces escalating risks—heatwaves, vector-borne diseases, disrupted care systems. Monkeypox, he noted, was a recent reminder of zoonotic threats. Solutions? Partnerships scaling innovation from high- to low-income countries, a green transition, and action from COP27 in Egypt. Ban urged a paradigm shift—political will, sustainability, and collaboration between WHO, governments, and academia—to ensure health as a “fundamental human right” endures climate chaos.
+
+#### ISQua CEO Dr. Carsten Engel: From Knowledge to Action  
+Dr. Carsten Engel, ISQua’s CEO, closed the opening with a rallying cry. ISQua’s mission—knowledge, network, voice, action—aims to elevate quality and tackle climate change. He positioned the conference as a launchpad for tangible progress, linking local efforts to global goals.
+
+#### Time for Change: AI and Patient Safety (10:45)  
+This session, running from 10:45 AM, explored artificial intelligence (AI) as a patient safety imperative, led by three heavyweights:  
+- **Jeffrey Braithwaite & Eyal Zimlichman:** Braithwaite introduced AI’s potential to address workforce shortages (e.g., 13 million healthcare worker deficit globally by 2030, per WHO) and preventable deaths (250,000 annually in the US, per IOM). Zimlichman, from Sheba Medical Center’s ARC (Accelerator for Research and Collaboration), detailed a platform fostering open innovation. Examples included:  
+  - **MedAware:** AI-driven medication safety, reducing errors vs. legacy systems.  
+  - **Caresyntax (Sheba collaboration):** Real-time surgical decision support, optimizing outcomes without overwhelming surgeons.  
+  - **Aidoc:** AI diagnostics cutting length of stay (LOS) and read times.  
+  ARC’s model—bridging startups, corporations, and hospitals—breaks geographical barriers, streamlining transformation.  
+- **Alan Forster:** From Ottawa Hospital, Forster revisited *To Err is Human* (1999), noting stalled safety progress. Barriers—silos, poor feedback loops, provider-centricity—hinder learning. AI enablers? Data democratization (e.g., synthetic data from PHI computational models) and open innovation ecosystems like Lumenix, predicting patient needs. He tied this to the Triple Aim: healthy populations, high-quality care, value for money. Challenges? Adoption costs and trust deficits.  
+
+Zimlichman added generative AI’s promise—transformative thinking, not just automation—evoking a future where healthcare does things “completely differently.”
+
+### Afternoon Sessions: Telemedicine and Human-Centered Care  
+
+#### Telemedicine During COVID-19 (13:45–14:30)  
+This session unpacked telemedicine’s pandemic-driven rise:  
+- **ACGME CLER (13:45):** The Accreditation Council for Graduate Medical Education’s Clinical Learning Environment Review (CLER) team assessed telemedicine’s rapid rollout. Variability in platforms (Zoom, Epic, proprietary systems) and patient access issues (e.g., rural broadband gaps) surfaced. Safety vulnerabilities included incomplete exams (no physical touch), lack of formal training, and reliance on telephone-only calls, risking misdiagnosis.  
+- **Peter Lachman (14:30, US Case Study):** Lachman showcased live video, store-and-forward e-consults (asynchronous), and remote patient monitoring, especially in mental health—telepsychiatry boomed, with 36% of US visits virtual by 2021 (CDC data). Stakeholders? Patients, communities, primary care, specialists, insurers.  
+- **Heon Jae Jeong (South Korea Case Study):** Korea legalized telemedicine in 2020 after decades of debate (previously B2B/B2C only, doctor-to-patient illegal). Risks? Malpractice from missing percussion/auscultation, critical for first-visit safety.  
+- **Ghana Case Study:** 24-hour CVD call centers and 3D teleporting (virtual consults) thrived with Ghana Health Service’s COVID Connect, backed by government investment.  
+- **IHI Framework:** The Institute for Healthcare Improvement recommended: clear clinician policies, patient guidance, equity focus (addressing digital divides), uptake measurement, and sustainability planning as traditional care disrupts.  
+
+#### People, Not Patients (15:45)  
+Catherine Calderwood and Helen Leonard, from Scotland’s Realistic Medicine initiative, reframed care as “people, not patients.” Health literacy—using information, not just understanding it—was key. They questioned: “Is it us or them who need to improve literacy?” Prior knowledge, insight, motivation, and altruism drive change.  
+
+Coproduction shone through a case: avoiding a gastrostomy PEG tube via shared decision-making, immeasurably improving quality of life. Strategic coproduction—capturing lived experience—requires a mindset shift from paternalism to partnership, a theme echoing Ban Ki Moon’s call for collaboration.
+
+---
+
+## Day 3: Tuesday, August 29 – Measuring Quality and Integrating Care  
+
+### Morning Sessions: PROMs, Digital Innovation, and External Evaluation  
+
+#### PROMs Achievement Award (09:00) – Eric Schneider (NCQA)  
+Eric Schneider from the National Committee for Quality Assurance (NCQA) kicked off at 9:00 AM, dissecting quality measurement in the US’s fragmented system. NCQA’s HEDIS (Healthcare Effectiveness Data and Information Set) tracks performance via admin, hybrid, and survey methods. Accountability is complex—Medicare Advantage Stars tie bonuses/penalties to outcomes like avoidable deaths. Schneider echoed FDR: “It is common sense to take a method and try it; if it fails, admit it frankly and try something else.”  
+
+Person-centered outcome measurement, equity-focused accountability, and digitalization were priorities. Electronic Clinical Data Systems (ECDS) and Fast Healthcare Interoperability Resources (FHIR) enable digital quality measures (dQMs), promising high-resolution quality portraits. Inequitable care—e.g., Black patients facing 30% higher maternal mortality (CDC)—demands incentivized equity, a journey just beginning.
+
+#### ISQua External Evaluation Association (EEA) (10:00)  
+A brief session on ISQua’s EEA underscored external evaluation’s role in benchmarking quality, though details were sparse in my notes—likely a procedural update.
+
+#### Digital Healthcare and Innovation Short Oral (10:45)  
+Five rapid-fire talks showcased digital care:  
+- **Agyeman-Duah:** Digital tools for preterm children tackle cognitive/language delays and attention issues. Free-text qualitative studies complement traditional care, with safety measures addressing ICT barriers.  
+- **Ju-Chun Chien (Taiwan):** Online treatment, assessed via the Theory of Planned Behavior, showed high satisfaction but risks misdiagnosis from poor audio/video. It’s an alternative, not a replacement.  
+- **Sinyoung Park:** Telehealth in Hospital Value-Based Purchasing Programs boosts clinical outcomes, engagement, safety, and cost reduction—hospitals with 3+ services excel.  
+- **Wannheden (Cuviva):** Telehealth for complex chronic diseases (remote monitoring, communication) faces non-adoption due to misalignment between value and organization.  
+- **Mohapatra:** Measuring rural health service gaps requires tailored metrics, a persistent challenge.  
+
+### Afternoon Sessions: Integrated Care and Coproduction  
+
+#### Integrated Care Short Oral: Enterprise Accreditation (Ron Quicho)  
+Ron Quicho from Joint Commission International (JCI) explored enterprise accreditation—moving beyond individual hospitals to interconnected systems. Benefits? Consistency, streamlined processes, improved quality, and benchmarking. Key elements:  
+- Governance/leadership alignment.  
+- Quality/performance improvement (QPI).  
+- Human resource coordination.  
+Algorithms extract quality indicators, guiding system-wide excellence.
+
+#### Spreading Coproduction to Create Value (15:45)  
+Three speakers elevated coproduction:  
+- **Zoe Wainer:** Tackled sex/gender biases in women’s health, noting cardiovascular disease differences (e.g., women’s subtler symptoms). Research bias at cellular levels demands redefinition of care.  
+- **Robert Kaplan:** Information asymmetry plagues generalizability—patients assume study results apply despite exclusion criteria. AI LLMs curate PROMs narratives, tailoring summaries. The “Green Button” (a proposed transparency tool) requires full study disclosure.  
+- **Sanjeev Arora (Project ECHO):** Extension for Community Healthcare Outcomes uses tech to leverage scarce resources, sharing best practices (e.g., Hep C treatment by primary care). Cost-effective diabetes care reduces disparities.  
+
+---
+
+## Day 4: Wednesday, August 30 – Technology, Virtual Care, and Actionable Ideas  
+
+### Morning Sessions: Technology and Healthcare Lessons  
+
+#### Technology and Healthcare (09:00) – Harnessing AI (Farah Magrabi)  
+Farah Magrabi from Macquarie University explored AI’s clinical decision support potential—robot search engines, virtual helpers, diagnostics. Techniques range from rule-based systems to neural networks mimicking the brain. FDA-approved devices (e.g., diabetic retinopathy screening) show limited autonomy, assisting—not replacing—humans. Safety events, often from data acquisition errors (e.g., false negatives in FFRCT), demand careful design and use.
+
+#### From Predictive to Generative AI (Eyal Zimlichman)  
+Eyal Zimlichman predicted a generative AI revolution amid staff shortages and digital transformation. GenAI creates insights—e.g., flagging chart errors, enhancing surgical safety (SBAR), empowering patients via avatars. Risks? Bias, privacy, hallucinations. Non-gen AI evolves; GenAI awaits its full impact.
+
+#### Enterprise Accreditation (10:45) – Carrie Mayer & Ron Quicho  
+Mayer and Quicho expanded on system-level accreditation, emphasizing governance, QPI dataflow, and uniformity. Comparative reports identify high-risk trends across geographies, streamlining care.
+
+#### COVID-19 Lessons from Taiwan (11:30) – Pi Tuan Chan  
+Pi Tuan Chan detailed Taiwan’s resilience during COVID-19, protecting capacity via the Taiwan Clinical Performance Indicator (TCPI). For Acute Myocardial Infarction (AMI), four prevention/response levels and shared learning platforms ensured continuity, returning to normal by May 2023.
+
+### Afternoon Sessions: Virtual Care and Closing Reflections  
+
+#### From Here to There: Quality and Virtual Care (13:30)  
+- **Jennifer Yoon (Humber River Hospital, Canada):** HRH’s Clinical Command Centre uses predictive analytics for patient flow and safety, reducing harm via real-time data.  
+- **Safaa Almajthoub (SEHA Virtual Hospital, Saudi Arabia):** Vision 2030’s largest virtual hospital broke barriers post-COVID, aiding Hajj and cross-border care.  
+- **Pa Chung Wang & Huei Ming Ma (Taiwan):** Smart hospitals and regional alliances (e.g., tele-ophthalmology, wound care apps) enhance equity and quality.  
+
+#### Ideas to Action (14:30) – Jeffrey Braithwaite, Anna Edwards, John Brennan  
+The conference closed with coproduction reflections. Challenges—culture, time, engagement—persist, but technology, networks, and workforce focus drive progress.
+
+---
+
+## Conclusion  
+ISQua 2023 was an exhaustive, exhilarating dive into healthcare’s present and future. Korea’s rise, AI’s promise, and calls for equity and sustainability left me with pages of notes—and a renewed sense of purpose.
+
+--- 

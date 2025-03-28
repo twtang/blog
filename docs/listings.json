@@ -2,7 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/the-great-gatsby/index.html"
+      "/posts/the-great-gatsby/index.html",
+      "/posts/ha-convention-2023/index.html",
+      "/posts/ha-convention-2024/index.html",
+      "/posts/isqua/index.html"
     ]
   }
 ]

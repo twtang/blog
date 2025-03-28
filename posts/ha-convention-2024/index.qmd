@@ -1,0 +1,117 @@
+---
+title: "HA Convention 2024: A Deep Dive into Healthcare Innovation"
+author: "TW"
+date: "2025-03-28"
+categories: [work]
+---
+
+### HA Convention 2024: A Deep Dive into Healthcare Innovation
+
+I had the privilege of attending the HA Convention 2024 in May 2024, where healthcare leaders and innovators gathered to share groundbreaking advancements and strategies. Below are my organized notes from the sessions I attended, capturing key insights and takeaways. This blog will serve as my personal record to revisit later—hope you find it as fascinating as I did!
+
+---
+
+### Session 1: National Chest Pain Centre (0900)
+**Focus:** Advancements in cardiovascular care and chest pain centre development  
+**Speakers:** Professor Ge and Professor Huo Yong  
+
+This session kicked off with an inspiring look at how chest pain centres are revolutionizing cardiovascular disease management in China and beyond.
+
+#### Professor Ge: The Present and Future of Chest Pain Centres
+Professor Ge highlighted the staggering scale of cardiovascular disease in China, affecting 330 million people, and the urgent need for better prevention and treatment. The goal? Minimize total ischemic time through "green pathways" in healthcare, regional collaborative networks, and end-to-end digital solutions like a unified ECG diagnostic system. Key points:  
+- **Innovations:** A chest pain emergency map helps patients locate the nearest centre quickly, while digital tools extend care to primary levels.  
+- **Progress:** In-hospital mortality for STEMI patients dropped to 3.4% in 2023 (down from 10.1% in 2011), with improved diagnosis for conditions like aortic dissection.  
+- **Future Vision:** Expand AI and digital tech, integrate chest pain centres across the Greater Bay Area, and leverage data for research.  
+
+#### Professor Huo Yong: Experience Sharing and Interventional Tech  
+Professor Huo Yong focused on standardizing critical pathways and boosting interventional capabilities. With 1.6 million PCI cases nationwide (1,163 per million people), the proportion of direct PCI cases has soared since 2019. Highlights:  
+- **Standardization:** Emphasis on objective data, consistent processes, and regional collaboration.  
+- **Impact:** Reduced door-to-wire times and a novel prevention/treatment system for cardiovascular disease.  
+- **Broader Reach:** Promoting critical care platforms for stroke, trauma, and high-risk pregnancies.  
+
+**Takeaway:** The blend of technology, collaboration, and data-driven care is transforming how we tackle heart disease—every second truly counts!
+
+---
+
+### Session 2: Technology Application - Making a Difference to Allied Health Practice (1045)
+**Focus:** Cutting-edge tech in allied health  
+**Speakers:** Mr. Watson Wong, Ms. Terri Ng Yan-lai, Mr. Jerry Cheung, Mr. Oscar Wong Chun-yiu  
+
+After a quick break, this session showcased how technology is enhancing allied health practices, from labs to prosthetics.
+
+#### Mr. Watson Wong: AI and Laboratory Science  
+Mr. Wong explored how AI and tech advancements (think microfluidics, nanotechnology, and next-gen sequencing) are game-changers in labs.  
+- **Applications:** Early detection of sepsis and diseases, personalized medicine via molecular diagnostics, and digital pathology.  
+- **AI Power:** Tools like LLMs speed up biomedical text mining, though challenges remain—transparency, ethics, and bias in "black box" models.  
+- **Vision:** Trustworthy AI that’s fast, accurate, and ethically sound.  
+
+#### Ms. Terri Ng Yan-lai: AR in Occupational Therapy  
+Ms. Ng introduced augmented reality (AR) for home interventions, streamlining assessments and modifications.  
+- **How It Works:** An all-in-one app (sketching, photos, LiDAR scanning) visualizes home changes, though it struggles with glass objects.  
+- **Benefits:** Identifies risks, enhances efficiency, and supports carers and families.  
+- **Challenges:** Data privacy and uneven surfaces complicate AR use.  
+
+#### Mr. Jerry Cheung: Web-Based LINAC QA  
+Mr. Cheung presented a centralized, web-based system for Linear Accelerator (LINAC) quality assurance.  
+- **Features:** Digital storage, EPID-based measurements, and Winston-Lutz QA ensure dose accuracy and safety.  
+- **Advantages:** User-friendly, flexible, and fault-tolerant with automatic backups.  
+- **Impact:** Fewer errors, better patient outcomes.  
+
+#### Mr. Oscar Wong Chun-yiu: Digitizing Prosthetics and Orthotics  
+Mr. Wong showcased how 3D printing, CAD/CAM, and robotics are revolutionizing prosthetics.  
+- **Innovations:** Scanning stumps for perfect alignment, replicating appearances, and crafting helmets for plagiocephaly.  
+- **Outcomes:** Improved body image, pressure therapy for keloids, and sports injury prevention.  
+- **Speed:** Digital tools accelerate measurement and fitting.  
+
+**Takeaway:** From AI-driven diagnostics to 3D-printed limbs, technology is making allied health more precise and accessible.
+
+---
+
+### Session 3: Precision Medicine in Psychiatry (1320)
+**Focus:** Personalized approaches to mental health  
+**Speakers:** Professor Li Tao and Professor Grainne McAlonan  
+
+Post-lunch, this session dove into how genetics and early brain development are shaping psychiatric care.
+
+#### Professor Li Tao: Multi-Omics in Schizophrenia  
+Professor Li Tao unpacked how multi-omics (genomics, transcriptomics) reveals schizophrenia’s heterogeneity.  
+- **Approach:** Clustering by etiology and phenotypes to identify subtypes, using public databases and normative models.  
+- **Findings:** Brain structural anomalies vary widely; subtypes linked to specific cell types and genetic risks could guide treatment.  
+- **Goal:** Translate bench research to bedside care.  
+
+#### Professor Grainne McAlonan: Early Brain Development and Autism  
+Professor McAlonan explored how early brain development informs autism interventions.  
+- **Key Factors:** Glutamate (excitatory) and GABA (inhibitory) balance, shaped by 1,000 days of early experiences.  
+- **Research:** Atypical neurogenesis and E/I differences in autistic brains suggest new treatment targets (e.g., arbaclofen).  
+- **Future:** Mechanism-informed therapies for social difficulties and sensory processing.  
+
+**Takeaway:** Precision medicine is unlocking tailored treatments for complex conditions like schizophrenia and autism—fascinating stuff!
+
+---
+
+### Session 4: Innovation Technologies in Staff Training, Learning, and Development (1445)
+**Focus:** Upskilling healthcare workers  
+**Speakers:** Mr. Roger Tan and Professor Mark Britnell  
+
+The final session tackled workforce challenges and the role of tech in training.
+
+#### Mr. Roger Tan: Modern Learning Technologies  
+Mr. Tan championed a lifelong learning culture in public service amid rapid tech changes.  
+- **Context:** COVID-19 accelerated digital transformation; generative AI is reshaping jobs.  
+- **Strategy:** 60/40 rule (training vs. self-development), 100 hours of annual learning, and a "smart nation" vision.  
+- **Goal:** A capable, innovative workforce ready for the future.  
+
+#### Professor Mark Britnell: Solving the Workforce Crisis  
+Professor Britnell addressed the global healthcare workforce shortage (20% vacancy rates, burnout).  
+- **Solutions:** Empower patients, reskill workers, leverage digital tools, and break tasks into manageable skills.  
+- **Examples:** Community carers and agile learning organizations to boost capacity.  
+- **Vision:** A sustainable, efficient healthcare system.  
+
+**Takeaway:** Training and tech are key to tackling workforce shortages—reskilling is the future!
+
+---
+
+### Final Thoughts  
+The HA Convention 2024 was a whirlwind of inspiration, blending cutting-edge tech with real-world healthcare solutions. From chest pain centres slashing mortality rates to AI-driven psychiatry and workforce innovations, it’s clear we’re on the cusp of a healthcare revolution. I’ll be revisiting these notes to reflect on how these ideas can shape my own work—stay tuned for more thoughts!
+
+---
