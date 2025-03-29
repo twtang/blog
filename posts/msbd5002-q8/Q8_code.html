@@ -201,13 +201,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Submissions :</strong> 1. Put all you codes in Q8_code folder. 2. Your prediction result named as Q8_output.csv . ( Notes: Each line represents the user’s rating of the movie, which means your final output should contain 3 columns: ‘UserID’, ‘MovieID’ and ‘Rating’)</p>
 <p><strong>Bonus:</strong></p>
 <p>There will be some bonus score if you use some creative or the state-of-arts models. Please report the advantages of your methods and list all your references in Q8_readme.pdf.</p>
-<div id="cell-2" class="cell" data-outputid="7300f3a1-7aed-481d-9319-03ffe8812d5c" data-execution_count="2">
+<div id="cell-2" class="cell" data-outputid="73a1fa3b-26f5-4381-8f18-0b246f4ff516" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>cd <span class="op">/</span>content<span class="op">/</span>drive<span class="op">/</span>MyDrive<span class="op">/</span>Notes<span class="op">/</span>MSBD5002<span class="op">/</span>Data_Q8</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>/content/drive/MyDrive/Notes/MSBD5002/Data_Q8</code></pre>
 </div>
 </div>
-<div id="cell-3" class="cell" data-outputid="33d22121-8fe6-4ecc-e308-69224ca6e90c" data-execution_count="3">
+<div id="cell-3" class="cell" data-outputid="33d22121-8fe6-4ecc-e308-69224ca6e90c">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>Uqq fastai</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 363.4/363.4 MB 3.8 MB/s eta 0:00:00
@@ -267,7 +267,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>We’ll load the data and prepare it for Fastai’s collaborative filtering module.</p>
 <section id="step-2.1-load-the-data" class="level4">
 <h4 class="anchored" data-anchor-id="step-2.1-load-the-data">Step 2.1: Load the Data</h4>
-<div id="cell-9" class="cell" data-outputid="9a08b724-6326-4082-bd5c-8241b63c62fc" data-execution_count="4">
+<div id="cell-9" class="cell" data-outputid="c9118ba4-c55c-4e4f-d49c-9cc04af3f1ef" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shutil</span>
@@ -503,19 +503,19 @@ Test Ratings:</code></pre>
 <section id="step-2.2-prepare-the-data-for-collaborative-filtering" class="level4">
 <h4 class="anchored" data-anchor-id="step-2.2-prepare-the-data-for-collaborative-filtering">Step 2.2: Prepare the Data for Collaborative Filtering</h4>
 <p>Fastai’s <code>collab_learner</code> expects a DataFrame with columns <code>user</code>, <code>item</code>, and <code>rating</code>. We’ll rename the columns in <code>ratings_train</code> accordingly.</p>
-<div id="cell-11" class="cell" data-outputid="933f9dd4-9ec5-47d2-ab5b-01f97496dcb3" data-execution_count="5">
+<div id="cell-11" class="cell" data-outputid="bc64b842-1520-4d71-cae8-d5dd3eb444e1" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename columns for Fastai</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>ratings_train <span class="op">=</span> ratings_train.rename(columns<span class="op">=</span>{<span class="st">'UserID'</span>: <span class="st">'user'</span>, <span class="st">'MovieID'</span>: <span class="st">'item'</span>, <span class="st">'Rating'</span>: <span class="st">'rating'</span>})</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>ratings_train <span class="op">=</span> ratings_train[[<span class="st">'user'</span>, <span class="st">'item'</span>, <span class="st">'rating'</span>]]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ratings_train = ratings_train.rename(columns={'UserID': 'user', 'MovieID': 'item', 'Rating': 'rating'})</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>ratings_train <span class="op">=</span> ratings_train[[<span class="st">'UserID'</span>, <span class="st">'MovieID'</span>, <span class="st">'Rating'</span>]]</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>display_df(ratings_train.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">user</th>
-<th data-quarto-table-cell-role="th">item</th>
-<th data-quarto-table-cell-role="th">rating</th>
+<th data-quarto-table-cell-role="th">UserID</th>
+<th data-quarto-table-cell-role="th">MovieID</th>
+<th data-quarto-table-cell-role="th">Rating</th>
 </tr>
 </thead>
 <tbody>
@@ -568,9 +568,9 @@ Test Ratings:</code></pre>
 <li><code>bs</code>: Batch size of 64.</li>
 </ul></li>
 </ul>
-<div id="cell-14" class="cell" data-outputid="fad85aa0-b30f-4285-9d5b-8dc297354206" data-execution_count="6">
+<div id="cell-14" class="cell" data-outputid="9711495c-0cae-4c26-edc2-ecd53ea3ac3a" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a CollabDataLoaders object</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>dls <span class="op">=</span> CollabDataLoaders.from_df(ratings_train, user_name<span class="op">=</span><span class="st">'user'</span>, item_name<span class="op">=</span><span class="st">'item'</span>, rating_name<span class="op">=</span><span class="st">'rating'</span>, bs<span class="op">=</span><span class="dv">64</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>dls <span class="op">=</span> CollabDataLoaders.from_df(ratings_train, user_name<span class="op">=</span><span class="st">'UserID'</span>, item_name<span class="op">=</span><span class="st">'MovieID'</span>, rating_name<span class="op">=</span><span class="st">'Rating'</span>, bs<span class="op">=</span><span class="dv">64</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Display a batch</span></span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>dls.show_batch()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -579,71 +579,71 @@ Test Ratings:</code></pre>
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">user</th>
-<th data-quarto-table-cell-role="th">item</th>
-<th data-quarto-table-cell-role="th">rating</th>
+<th data-quarto-table-cell-role="th">UserID</th>
+<th data-quarto-table-cell-role="th">MovieID</th>
+<th data-quarto-table-cell-role="th">Rating</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>452</td>
-<td>1721</td>
-<td>5</td>
+<td>426</td>
+<td>2580</td>
+<td>4</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
-<td>770</td>
-<td>3745</td>
-<td>2</td>
+<td>621</td>
+<td>1128</td>
+<td>1</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
-<td>3308</td>
-<td>423</td>
-<td>2</td>
+<td>2148</td>
+<td>1438</td>
+<td>4</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
-<td>4957</td>
-<td>3040</td>
-<td>2</td>
+<td>1563</td>
+<td>2997</td>
+<td>5</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
-<td>2820</td>
-<td>1305</td>
-<td>3</td>
+<td>29</td>
+<td>1204</td>
+<td>5</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">5</td>
-<td>5394</td>
-<td>2579</td>
+<td>3826</td>
+<td>1197</td>
 <td>4</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">6</td>
-<td>4167</td>
-<td>47</td>
-<td>4</td>
+<td>5664</td>
+<td>2571</td>
+<td>5</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">7</td>
-<td>1912</td>
-<td>3371</td>
-<td>1</td>
+<td>825</td>
+<td>3095</td>
+<td>5</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">8</td>
-<td>4771</td>
-<td>549</td>
-<td>3</td>
+<td>2683</td>
+<td>802</td>
+<td>4</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">9</td>
-<td>223</td>
-<td>208</td>
-<td>4</td>
+<td>4064</td>
+<td>1801</td>
+<td>2</td>
 </tr>
 </tbody>
 </table>
@@ -663,7 +663,7 @@ Test Ratings:</code></pre>
 <li>Trains for 5 epochs with a learning rate of 5e-3 and weight decay of 0.1.</li>
 </ul></li>
 </ul>
-<div id="cell-16" class="cell" data-outputid="83495581-2432-4a2c-f1c8-8f615b01daf8" data-execution_count="7">
+<div id="cell-16" class="cell" data-outputid="2a44b618-2d4c-4ee4-8306-34b3aaac64ca" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a collaborative filtering learner</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>learn <span class="op">=</span> collab_learner(dls, n_factors<span class="op">=</span><span class="dv">50</span>, y_range<span class="op">=</span>(<span class="fl">0.5</span>, <span class="fl">5.5</span>))</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -690,8 +690,8 @@ Test Ratings:</code></pre>
 <div class="cell-output cell-output-display">
 
 </div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>SuggestedLRs(valley=0.015848932787775993)</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>SuggestedLRs(valley=0.013182567432522774)</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div>
@@ -701,7 +701,7 @@ Test Ratings:</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-17" class="cell" data-outputid="5ff07522-46ea-40e0-fa60-ea181a49ac06" data-execution_count="8">
+<div id="cell-17" class="cell" data-outputid="13c9745e-8175-4122-9848-8545a9c8a9a7" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Train the model</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>learn.fit_one_cycle(<span class="dv">5</span>, <span class="fl">5e-3</span>, wd<span class="op">=</span><span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -735,33 +735,33 @@ Test Ratings:</code></pre>
 <tbody>
 <tr class="odd">
 <td>0</td>
-<td>0.849655</td>
-<td>0.906807</td>
-<td>01:05</td>
+<td>0.888834</td>
+<td>0.900303</td>
+<td>01:00</td>
 </tr>
 <tr class="even">
 <td>1</td>
-<td>0.817809</td>
-<td>0.877320</td>
-<td>01:06</td>
+<td>0.792929</td>
+<td>0.874477</td>
+<td>01:02</td>
 </tr>
 <tr class="odd">
 <td>2</td>
-<td>0.764462</td>
-<td>0.841360</td>
-<td>01:11</td>
+<td>0.765064</td>
+<td>0.838958</td>
+<td>01:00</td>
 </tr>
 <tr class="even">
 <td>3</td>
-<td>0.723700</td>
-<td>0.801309</td>
-<td>01:05</td>
+<td>0.720110</td>
+<td>0.795160</td>
+<td>01:03</td>
 </tr>
 <tr class="odd">
 <td>4</td>
-<td>0.683354</td>
-<td>0.788310</td>
-<td>01:09</td>
+<td>0.712781</td>
+<td>0.781255</td>
+<td>01:08</td>
 </tr>
 </tbody>
 </table>
@@ -777,9 +777,9 @@ Test Ratings:</code></pre>
 <li><strong>get_preds</strong>: Predicts ratings for the test set.</li>
 <li><strong>Rounding</strong>: Rounds predictions to the nearest integer and clips them to the range [1, 5].</li>
 </ul>
-<div id="cell-19" class="cell" data-outputid="65cafdb3-c2e4-49a8-c42f-3c07c5a98ca9" data-execution_count="9">
+<div id="cell-19" class="cell" data-outputid="65cafdb3-c2e4-49a8-c42f-3c07c5a98ca9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare the test set</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>test_dl <span class="op">=</span> dls.test_dl(ratings_test.rename(columns<span class="op">=</span>{<span class="st">'UserID'</span>: <span class="st">'user'</span>, <span class="st">'MovieID'</span>: <span class="st">'item'</span>}))</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>test_dl <span class="op">=</span> dls.test_dl(ratings_test)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Predict ratings</span></span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>preds, _ <span class="op">=</span> learn.get_preds(dl<span class="op">=</span>test_dl)</span>
@@ -815,6 +815,375 @@ Test Ratings:</code></pre>
 
 </div>
 </div>
+</section>
+</section>
+<section id="step-5-using-additional-features" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-using-additional-features">Step 5: Using Additional Features</h2>
+<p>Let’s enhance the movie recommendation system by incorporating additional features like <code>Age</code>, <code>Genres</code>, <code>OccupationID</code>, and <code>Zipcode</code> into the model. These features can provide more context about users and movies, potentially improving the prediction accuracy. Since FastAI’s <code>collab_learner</code> is primarily designed for collaborative filtering (using only user and item IDs), we’ll need to take a hybrid approach by combining collaborative filtering with content-based features. We can achieve this by preprocessing the data and using a custom model in FastAI that incorporates these additional features.</p>
+<section id="step-5.1-understanding-the-additional-features" class="level3">
+<h3 class="anchored" data-anchor-id="step-5.1-understanding-the-additional-features">Step 5.1: Understanding the Additional Features</h3>
+<ul>
+<li><strong>users.csv</strong>: Contains <code>UserID</code>, <code>Gender</code>, <code>Age</code>, <code>OccupationID</code>, and <code>Zip-code</code>.
+<ul>
+<li><code>Age</code>: Numerical (e.g., 1, 18, 25, etc.).</li>
+<li><code>OccupationID</code>: Categorical (e.g., 0 to 20).</li>
+<li><code>Zip-code</code>: Categorical (e.g., “48067”).</li>
+<li><code>Gender</code>: Categorical (e.g., “M”, “F”).</li>
+</ul></li>
+<li><strong>movies.csv</strong>: Contains <code>MovieID</code>, <code>Title</code>, and <code>Genres</code>.
+<ul>
+<li><code>Genres</code>: Multiple genres per movie (e.g., “Animation|Children’s”).</li>
+</ul></li>
+</ul>
+<p>We’ll preprocess these features: - <strong>Genres</strong>: Split the multi-label genres into binary columns (one-hot encoding for each genre). - <strong>Zip-code</strong>: Extract the first 3 digits (to reduce cardinality) and treat it as a categorical feature. - <strong>Age</strong>, <strong>OccupationID</strong>, <strong>Gender</strong>: Treat as categorical features (FastAI will embed them).</p>
+</section>
+<section id="step-5.2-preprocessing-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="step-5.2-preprocessing-the-data">Step 5.2: Preprocessing the Data</h3>
+<p>We’ll merge the additional features into the training and test datasets and preprocess them for use in a hybrid model.</p>
+<section id="preprocessing-code" class="level4">
+<h4 class="anchored" data-anchor-id="preprocessing-code">Preprocessing Code</h4>
+<div id="cell-23" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fastai.collab <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fastai.tabular.<span class="bu">all</span> <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the datasets</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>train_df <span class="op">=</span> pd.read_csv(<span class="st">'rating_train.csv'</span>)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>test_df <span class="op">=</span> pd.read_csv(<span class="st">'rating_test.csv'</span>)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>users_df <span class="op">=</span> pd.read_csv(<span class="st">'users.csv'</span>)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>movies_df <span class="op">=</span> pd.read_csv(<span class="st">'movies.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-24" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Preprocess Users Data ---</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract first 3 digits of Zipcode to reduce cardinality</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>users_df[<span class="st">'Zip-code'</span>] <span class="op">=</span> users_df[<span class="st">'Zip-code'</span>].<span class="bu">str</span>[:<span class="dv">3</span>]</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Age, OccupationID, Gender, and Zipcode to categorical</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>users_df[<span class="st">'Age'</span>] <span class="op">=</span> users_df[<span class="st">'Age'</span>].astype(<span class="st">'category'</span>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>users_df[<span class="st">'OccupationID'</span>] <span class="op">=</span> users_df[<span class="st">'OccupationID'</span>].astype(<span class="st">'category'</span>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>users_df[<span class="st">'Gender'</span>] <span class="op">=</span> users_df[<span class="st">'Gender'</span>].astype(<span class="st">'category'</span>)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>users_df[<span class="st">'Zip-code'</span>] <span class="op">=</span> users_df[<span class="st">'Zip-code'</span>].astype(<span class="st">'category'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-25" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Preprocess Movies Data ---</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Split genres into a list</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>movies_df[<span class="st">'Genres'</span>] <span class="op">=</span> movies_df[<span class="st">'Genres'</span>].<span class="bu">str</span>.split(<span class="st">'|'</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Get all unique genres</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>all_genres <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> genres <span class="kw">in</span> movies_df[<span class="st">'Genres'</span>]:</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    all_genres.update(genres)</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>all_genres <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">list</span>(all_genres))</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Create binary columns for each genre</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> genre <span class="kw">in</span> all_genres:</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    movies_df[genre] <span class="op">=</span> movies_df[<span class="st">'Genres'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="dv">1</span> <span class="cf">if</span> genre <span class="kw">in</span> x <span class="cf">else</span> <span class="dv">0</span>)</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop the original Genres column</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>movies_df <span class="op">=</span> movies_df.drop(columns<span class="op">=</span>[<span class="st">'Genres'</span>, <span class="st">'Title'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-26" class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Merge Features into Train and Test Data ---</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge user features</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>train_df <span class="op">=</span> train_df.merge(users_df, on<span class="op">=</span><span class="st">'UserID'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>test_df <span class="op">=</span> test_df.merge(users_df, on<span class="op">=</span><span class="st">'UserID'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge movie features</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>train_df <span class="op">=</span> train_df.merge(movies_df, on<span class="op">=</span><span class="st">'MovieID'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>test_df <span class="op">=</span> test_df.merge(movies_df, on<span class="op">=</span><span class="st">'MovieID'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure all categorical columns are treated as categories</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>cat_cols <span class="op">=</span> [<span class="st">'UserID'</span>, <span class="st">'MovieID'</span>, <span class="st">'Gender'</span>, <span class="st">'Age'</span>, <span class="st">'OccupationID'</span>, <span class="st">'Zip-code'</span>]</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> cat_cols:</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    train_df[col] <span class="op">=</span> train_df[col].astype(<span class="st">'category'</span>)</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    test_df[col] <span class="op">=</span> test_df[col].astype(<span class="st">'category'</span>)</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Continuous columns (genre binary features are already 0/1)</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>cont_cols <span class="op">=</span> all_genres  <span class="co"># The genre columns are binary but treated as continuous</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>dep_var <span class="op">=</span> <span class="st">'Rating'</span>  <span class="co"># Dependent variable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="explanation-of-preprocessing" class="level4">
+<h4 class="anchored" data-anchor-id="explanation-of-preprocessing">Explanation of Preprocessing</h4>
+<ol type="1">
+<li><strong>Users Data</strong>:
+<ul>
+<li><code>Zip-code</code>: Reduced cardinality by taking the first 3 digits (e.g., “48067” → “480”).</li>
+<li><code>Age</code>, <code>OccupationID</code>, <code>Gender</code>, <code>Zipcode</code>: Converted to categorical variables for embedding.</li>
+</ul></li>
+<li><strong>Movies Data</strong>:
+<ul>
+<li><code>Genres</code>: Split into binary columns (e.g., <code>Animation</code>, <code>Comedy</code>, etc.) using one-hot encoding.</li>
+<li>Dropped <code>Title</code> and <code>Genres</code> columns after processing.</li>
+</ul></li>
+<li><strong>Merging</strong>:
+<ul>
+<li>Merged user features (<code>Gender</code>, <code>Age</code>, <code>OccupationID</code>, <code>Zipcode</code>) into the train/test data using <code>UserID</code>.</li>
+<li>Merged movie features (genre binary columns) into the train/test data using <code>MovieID</code>.</li>
+</ul></li>
+<li><strong>Categorical and Continuous Columns</strong>:
+<ul>
+<li>Categorical: <code>UserID</code>, <code>MovieID</code>, <code>Gender</code>, <code>Age</code>, <code>OccupationID</code>, <code>Zip-code</code>.</li>
+<li>Continuous: Genre binary columns (e.g., <code>Animation</code>, <code>Comedy</code>).</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="step-5.3-build-a-hybrid-model-with-fastai" class="level3">
+<h3 class="anchored" data-anchor-id="step-5.3-build-a-hybrid-model-with-fastai">Step 5.3: Build a Hybrid Model with FastAI</h3>
+<p>FastAI’s <code>collab_learner</code> doesn’t directly support additional features, so we’ll use a tabular model (<code>tabular_learner</code>) with embeddings for categorical variables and continuous features for the genre columns. We’ll create a custom dataset that combines collaborative filtering (user-movie interactions) with the additional features.</p>
+<section id="code-for-hybrid-model" class="level4">
+<h4 class="anchored" data-anchor-id="code-for-hybrid-model">Code for Hybrid Model</h4>
+<div id="cell-29" class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the categorical and continuous columns</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>cat_names <span class="op">=</span> [<span class="st">'UserID'</span>, <span class="st">'MovieID'</span>, <span class="st">'Gender'</span>, <span class="st">'Age'</span>, <span class="st">'OccupationID'</span>, <span class="st">'Zip-code'</span>]</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>cont_names <span class="op">=</span> all_genres</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>y_names <span class="op">=</span> <span class="st">'Rating'</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>y_range <span class="op">=</span> (<span class="fl">0.5</span>, <span class="fl">5.5</span>)  <span class="co"># Ratings are 1 to 5, with a small buffer</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-30" class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a TabularPandas object for the training data</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>procs <span class="op">=</span> [Categorify, FillMissing, Normalize]  <span class="co"># Preprocessing steps</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>splits <span class="op">=</span> RandomSplitter(valid_pct<span class="op">=</span><span class="fl">0.2</span>, seed<span class="op">=</span><span class="dv">42</span>)(range_of(train_df))  <span class="co"># 80/20 split</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>to <span class="op">=</span> TabularPandas(</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    train_df,</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    procs<span class="op">=</span>procs,</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    cat_names<span class="op">=</span>cat_names,</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    cont_names<span class="op">=</span>cont_names,</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    y_names<span class="op">=</span>y_names,</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    splits<span class="op">=</span>splits,</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    y_block<span class="op">=</span>RegressionBlock()</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-31" class="cell" data-execution_count="45">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create DataLoaders</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>dls <span class="op">=</span> to.dataloaders(bs<span class="op">=</span><span class="dv">64</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a tabular learner</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>learn <span class="op">=</span> tabular_learner(</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    dls,</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    layers<span class="op">=</span>[<span class="dv">200</span>, <span class="dv">100</span>],  <span class="co"># Two hidden layers</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    y_range<span class="op">=</span>y_range,</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    metrics<span class="op">=</span>rmse</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-32" class="cell" data-outputid="6e7b606c-96fc-43b4-fc66-8aadff264b05" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Find a good learning rate</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>learn.lr_find()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+<style>
+    /* Turns off some styling */
+    progress {
+        /* gets rid of default border in Firefox and Opera. */
+        border: none;
+        /* Needs to be in here for Safari polyfill so background images work as expected. */
+        background-size: auto;
+    }
+    progress:not([value]), progress:not([value])::-webkit-progress-bar {
+        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);
+    }
+    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
+        background: #F44336;
+    }
+</style>
+</div>
+<div class="cell-output cell-output-display">
+
+</div>
+<div class="cell-output cell-output-display" data-execution_count="46">
+<pre><code>SuggestedLRs(valley=0.004365158267319202)</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Q8_code_files/figure-html/cell-17-output-4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-33" class="cell" data-outputid="a347bd31-14b9-4b88-bf8b-399ae3cd232f" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Train the model (using a learning rate, e.g., 1e-2, adjust based on lr_find)</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>learn.fit_one_cycle(<span class="dv">5</span>, <span class="fl">1e-2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+<style>
+    /* Turns off some styling */
+    progress {
+        /* gets rid of default border in Firefox and Opera. */
+        border: none;
+        /* Needs to be in here for Safari polyfill so background images work as expected. */
+        background-size: auto;
+    }
+    progress:not([value]), progress:not([value])::-webkit-progress-bar {
+        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);
+    }
+    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
+        background: #F44336;
+    }
+</style>
+</div>
+<div class="cell-output cell-output-display">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">epoch</th>
+<th data-quarto-table-cell-role="th">train_loss</th>
+<th data-quarto-table-cell-role="th">valid_loss</th>
+<th data-quarto-table-cell-role="th">_rmse</th>
+<th data-quarto-table-cell-role="th">time</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0.844334</td>
+<td>0.852411</td>
+<td>0.923262</td>
+<td>01:46</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0.779786</td>
+<td>0.817290</td>
+<td>0.904041</td>
+<td>01:42</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>0.733219</td>
+<td>0.807426</td>
+<td>0.898569</td>
+<td>01:41</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>0.683579</td>
+<td>0.774480</td>
+<td>0.880046</td>
+<td>01:42</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>0.662992</td>
+<td>0.767562</td>
+<td>0.876106</td>
+<td>01:40</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="cell-34" class="cell" data-outputid="bb4d1704-dbf6-4b95-d97c-14854d73fb0f" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Make Predictions on Test Data ---</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a TabularPandas object for the test data</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>test_to <span class="op">=</span> to.new(test_df)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>test_to.process()</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a test DataLoader</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>test_dl <span class="op">=</span> dls.test_dl(test_to.items)</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Get predictions</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>preds, _ <span class="op">=</span> learn.get_preds(dl<span class="op">=</span>test_dl)</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Round predictions to the nearest integer</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>test_df[<span class="st">'Rating'</span>] <span class="op">=</span> preds.<span class="bu">round</span>().<span class="bu">int</span>()</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Select the required columns for the output</span></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>output_df <span class="op">=</span> test_df[[<span class="st">'UserID'</span>, <span class="st">'MovieID'</span>, <span class="st">'Rating'</span>]]</span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the predictions to Q8_output.csv</span></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>output_df.to_csv(<span class="st">'Q8_output.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Predictions saved to Q8_output.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+<style>
+    /* Turns off some styling */
+    progress {
+        /* gets rid of default border in Firefox and Opera. */
+        border: none;
+        /* Needs to be in here for Safari polyfill so background images work as expected. */
+        background-size: auto;
+    }
+    progress:not([value]), progress:not([value])::-webkit-progress-bar {
+        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);
+    }
+    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
+        background: #F44336;
+    }
+</style>
+</div>
+<div class="cell-output cell-output-display">
+
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Predictions saved to Q8_output.csv</code></pre>
+</div>
+</div>
+</section>
+<section id="explanation-of-the-hybrid-model" class="level4">
+<h4 class="anchored" data-anchor-id="explanation-of-the-hybrid-model">Explanation of the Hybrid Model</h4>
+<ol type="1">
+<li><strong>TabularPandas</strong>:
+<ul>
+<li><code>cat_names</code>: Categorical variables (<code>UserID</code>, <code>MovieID</code>, <code>Gender</code>, <code>Age</code>, <code>OccupationID</code>, <code>Zipcode</code>) are embedded.</li>
+<li><code>cont_names</code>: Genre binary columns are treated as continuous features.</li>
+<li><code>y_names</code>: The target variable is <code>Rating</code>.</li>
+<li><code>procs</code>: Preprocessing steps like <code>Categorify</code> (for categorical variables), <code>FillMissing</code>, and <code>Normalize</code> (for continuous variables).</li>
+</ul></li>
+<li><strong>DataLoaders</strong>:
+<ul>
+<li>Created a 80/20 train-validation split for training and evaluation.</li>
+</ul></li>
+<li><strong>tabular_learner</strong>:
+<ul>
+<li>Uses embeddings for categorical variables (e.g., <code>UserID</code>, <code>MovieID</code>, etc.).</li>
+<li>Combines embeddings with continuous features (genres) in a neural network with two hidden layers (<code>[200, 100]</code>).</li>
+<li><code>y_range=(0.5, 5.5)</code> constrains the output to the rating scale.</li>
+</ul></li>
+<li><strong>Training</strong>:
+<ul>
+<li>Trained for 5 epochs with a learning rate (assumed 1e-2, adjust based on <code>lr_find</code>).</li>
+</ul></li>
+<li><strong>Predictions</strong>:
+<ul>
+<li>Processed the test data using the same preprocessing pipeline.</li>
+<li>Predicted ratings, rounded them to integers, and saved the output.</li>
+</ul></li>
+</ol>
+</section>
+<section id="updated-bonus-report" class="level4">
+<h4 class="anchored" data-anchor-id="updated-bonus-report">Updated Bonus Report</h4>
+<p><strong>Advantages of the Hybrid Model with FastAI</strong></p>
+<ol type="1">
+<li><strong>Incorporation of Additional Features</strong>: By including user features (<code>Age</code>, <code>Gender</code>, <code>OccupationID</code>, <code>Zipcode</code>) and movie features (<code>Genres</code>), the model captures more context about user preferences and movie characteristics, potentially improving prediction accuracy.</li>
+<li><strong>Flexibility of FastAI</strong>: FastAI’s <code>tabular_learner</code> allows us to combine collaborative filtering (via <code>UserID</code> and <code>MovieID</code> embeddings) with content-based features (genres, user demographics) in a single model.</li>
+<li><strong>Embedding for Categorical Variables</strong>: FastAI automatically creates embeddings for categorical variables, which helps in learning meaningful representations for <code>Age</code>, <code>OccupationID</code>, <code>Zipcode</code>, and <code>Gender</code>.</li>
+<li><strong>Scalability</strong>: The model can handle both sparse user-item interactions and dense feature data (e.g., genres), making it scalable to larger datasets.</li>
+<li><strong>Performance</strong>: The hybrid approach often outperforms pure collaborative filtering by leveraging additional information, as reflected in the RMSE (calculated above).</li>
+</ol>
+<p><strong>Comparison with State-of-the-Art Methods</strong></p>
+<ol type="1">
+<li><strong>Pure Collaborative Filtering</strong>: The previous approach (using <code>collab_learner</code>) relied solely on user-item interactions. The hybrid model improves on this by incorporating content-based features, which can help in cold-start scenarios (new users or movies).</li>
+<li><strong>Neural Collaborative Filtering (NCF)</strong>: NCF uses a neural network for user-item interactions but doesn’t naturally incorporate side information. Our hybrid model extends this idea by adding user and movie features, making it more robust.</li>
+<li><strong>Graph-Based Methods</strong>: Graph Neural Networks (GNNs) can model higher-order relationships but often don’t directly use content features like genres or demographics. Our hybrid model is simpler and directly leverages these features.</li>
+<li><strong>State-of-the-Art Hybrid Methods</strong>: Advanced hybrid methods (e.g., DeepFM, Wide &amp; Deep) combine collaborative and content-based features using complex architectures. Our model is a simpler hybrid approach but still effective, as it uses embeddings and a neural network to combine features.</li>
+</ol>
+<p><strong>Conclusion</strong></p>
+<p>The hybrid model with FastAI provides a practical and effective solution for this movie recommendation task. By incorporating user demographics and movie genres, it achieves a better RMSE (as calculated above) compared to pure collaborative filtering. While state-of-the-art methods like DeepFM might offer further improvements, they require more complex implementation. This hybrid approach strikes a good balance between performance and simplicity.</p>
+</section>
+</section>
+<section id="final-notes" class="level3">
+<h3 class="anchored" data-anchor-id="final-notes">Final Notes</h3>
+<ul>
+<li>The code assumes all CSV files are in the same directory.</li>
+<li>The learning rate (1e-2) is a placeholder; use <code>learn.lr_find()</code> to find the optimal value.</li>
+<li>The hybrid model leverages additional features, which should improve prediction accuracy, especially for users or movies with sparse interaction data.</li>
+<li>If you have access to the ground truth ratings for <code>rating_test.csv</code>, you can compute the actual RMSE for the bonus score.</li>
+</ul>
 </section>
 <section id="step-6-package-the-submission" class="level3">
 <h3 class="anchored" data-anchor-id="step-6-package-the-submission">Step 6: Package the Submission</h3>
