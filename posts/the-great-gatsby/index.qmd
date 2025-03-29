@@ -2,6 +2,7 @@
 title: "The Great Gatsby: American Dream and Moral Decay"
 author: "TW"
 date: "2025-03-28"
+image: image.png
 categories: [book]
 ---
 

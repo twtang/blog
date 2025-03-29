@@ -28,5 +28,11 @@
   },
   "posts/korean-medtech-visit/index.qmd": {
     "index.html": "184601b4"
+  },
+  "posts/msbd5002-q8/Q8_code.ipynb": {
+    "Q8_code.html": "353daba0"
+  },
+  "posts/msbd5002-q2/Q2_code.ipynb": {
+    "Q2_code.html": "fdc374cc"
   }
 }
