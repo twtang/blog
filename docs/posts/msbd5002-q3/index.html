@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="TW">
+<meta name="dcterms.date" content="2025-03-29">
 
-<title>Blog</title>
+<title>Q3. Data Augmentation (5 points) – Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +68,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Blog</span>
     </a>
   </div>
@@ -149,7 +91,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,309 +114,175 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Q3. Data Augmentation (5 points)</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">exam</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>TW </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 29, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="Ym9vaw==">book <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXhhbQ==">exam <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHl0aG9u">python <span class="quarto-category-count">(3)</span></div><div class="category" data-category="d29yaw==">work <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="q3.-data-augmentation-5-points" class="level2">
+<h2 class="anchored" data-anchor-id="q3.-data-augmentation-5-points">Q3. Data Augmentation (5 points)</h2>
+<p>We all know that adequate training data is a precondition for training machine learning models. But in real-world problems, the data that can be used to train the model is often not enough. Suppose you are doing a classification task and your training dataset is extremely insufficient. Please explain how you will expand the amount of data.</p>
+<p><strong>Notes :</strong></p>
+<p>You do NOT need to code in this question, but you need to answer in detail. Please give at least two specific examples to illustrate, such as image classification, text classification and so on. You can also refer to other materials to answer this question, if you do so, please also list your references.</p>
+<p><strong>Submissions :</strong></p>
+<ol type="1">
+<li>Put your answer and references in Q3_readme.pdf , and put it in folder Q3 .</li>
+<li>No page limit for the answer.</li>
+</ol>
+<hr>
+<p>Let’s address Q3, which asks about data augmentation in the context of a classification task where the training dataset is extremely insufficient. The goal is to explain how to expand the amount of data, provide at least two specific examples (e.g., for image classification, text classification, etc.), and document the answer in a <code>Q3_readme.pdf</code> file to be placed in a folder named <code>Q3</code>. No coding is required, but the explanation must be detailed. Let’s break this down and provide a thorough response.</p>
+<hr>
+<section id="answer-to-q3-data-augmentation-for-insufficient-training-data" class="level3">
+<h3 class="anchored" data-anchor-id="answer-to-q3-data-augmentation-for-insufficient-training-data">Answer to Q3: Data Augmentation for Insufficient Training Data</h3>
+<section id="introduction" class="level4">
+<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
+<p>Data augmentation is a critical technique in machine learning, especially when the training dataset is insufficient. In real-world problems, collecting large amounts of labeled data can be expensive, time-consuming, or impractical. For classification tasks, an insufficient dataset can lead to overfitting, where the model learns to memorize the training data rather than generalize to unseen data. Data augmentation addresses this by artificially expanding the training dataset through transformations or synthetic data generation, thereby improving the model’s robustness and generalization. In this response, I will explain how data augmentation can be used to expand the amount of data for a classification task and provide two specific examples: one for image classification and one for text classification.</p>
+</section>
+<section id="what-is-data-augmentation" class="level4">
+<h4 class="anchored" data-anchor-id="what-is-data-augmentation">What is Data Augmentation?</h4>
+<p>Data augmentation involves creating new training samples by applying transformations to the existing data while preserving the labels. These transformations are designed to mimic real-world variations that the model might encounter, making the model more robust. For example, in image classification, a picture of a dog might be rotated or flipped to create new samples that still represent a dog. In text classification, synonyms might be substituted to create new sentences with the same meaning. The key is to ensure that the augmented data remains representative of the original class.</p>
+</section>
+<section id="why-use-data-augmentation-for-insufficient-data" class="level4">
+<h4 class="anchored" data-anchor-id="why-use-data-augmentation-for-insufficient-data">Why Use Data Augmentation for Insufficient Data?</h4>
+<p>When the training dataset is extremely insufficient, the model may fail to learn the underlying patterns of the data, leading to poor performance on unseen data. Data augmentation helps by:</p>
+<ol type="1">
+<li><strong>Increasing Dataset Size</strong>: More data allows the model to learn better representations and reduces overfitting.</li>
+<li><strong>Introducing Variability</strong>: Augmentation mimics real-world variations (e.g., lighting changes in images, paraphrasing in text), making the model more robust.</li>
+<li><strong>Balancing Classes</strong>: In imbalanced datasets, augmentation can generate more samples for underrepresented classes.</li>
+<li><strong>Reducing Data Collection Costs</strong>: Instead of collecting new labeled data, augmentation creates synthetic data at a lower cost.</li>
+</ol>
+</section>
+<section id="how-to-expand-the-amount-of-data-using-data-augmentation" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-expand-the-amount-of-data-using-data-augmentation">How to Expand the Amount of Data Using Data Augmentation</h4>
+<p>To expand the amount of data, we can apply domain-specific transformations to the existing dataset. The choice of augmentation techniques depends on the type of data (e.g., images, text, audio) and the classification task. Below, I outline the general approach and then provide two specific examples.</p>
+<p><strong>General Approach</strong>:</p>
+<ol type="1">
+<li><strong>Understand the Data and Task</strong>: Identify the type of data (e.g., images, text) and the classification task (e.g., binary or multi-class).</li>
+<li><strong>Select Appropriate Transformations</strong>: Choose augmentation techniques that preserve the label while introducing meaningful variations. For example, rotating an image of a cat still results in an image of a cat, but changing the word “cat” to “dog” in a sentence changes the meaning and label.</li>
+<li><strong>Apply Transformations</strong>: Use libraries or tools to apply the transformations (e.g., image processing libraries for images, NLP libraries for text).</li>
+<li><strong>Balance the Dataset</strong>: If the dataset is imbalanced, apply augmentation more aggressively to underrepresented classes.</li>
+<li><strong>Validate the Augmented Data</strong>: Ensure that the augmented data is still representative of the original classes and doesn’t introduce noise or bias.</li>
+</ol>
+</section>
+<section id="example-1-image-classification-e.g.-classifying-cats-vs.-dogs" class="level4">
+<h4 class="anchored" data-anchor-id="example-1-image-classification-e.g.-classifying-cats-vs.-dogs">Example 1: Image Classification (e.g., Classifying Cats vs.&nbsp;Dogs)</h4>
+<p>Suppose we have a small dataset of 100 images (50 cats, 50 dogs) for a binary image classification task, which is insufficient to train a deep learning model like a convolutional neural network (CNN). We can use data augmentation to expand the dataset as follows:</p>
+<ul>
+<li><p><strong>Transformations</strong>:</p>
+<ol type="1">
+<li><strong>Rotation</strong>: Rotate each image by random angles (e.g., -30° to 30°). A cat image rotated by 15° still depicts a cat.</li>
+<li><strong>Flipping</strong>: Apply horizontal flips to create mirror images. A horizontally flipped dog image still depicts a dog.</li>
+<li><strong>Brightness Adjustment</strong>: Adjust the brightness of the image (e.g., increase or decrease by 20%). This mimics different lighting conditions.</li>
+<li><strong>Cropping and Resizing</strong>: Randomly crop a portion of the image and resize it back to the original dimensions. This simulates different perspectives.</li>
+<li><strong>Color Jittering</strong>: Slightly alter the hue, saturation, or contrast to simulate color variations.</li>
+</ol></li>
+<li><p><strong>Implementation</strong>:</p>
+<ul>
+<li>Using a library like <code>albumentations</code> or <code>torchvision</code> (in Python), we can apply these transformations. For example, a single image of a cat can be transformed into 5 new images: one rotated, one flipped, one with adjusted brightness, one cropped, and one with color jittering.</li>
+<li>If we apply 5 transformations to each of the 100 images, we can expand the dataset to 500 images (100 original + 400 augmented).</li>
+</ul></li>
+<li><p><strong>Impact</strong>:</p>
+<ul>
+<li>The model now has more data to learn from, reducing overfitting.</li>
+<li>The transformations introduce variability (e.g., different angles, lighting), making the model more robust to real-world variations.</li>
+<li>For example, a CNN trained on this augmented dataset will better handle images of cats taken at different angles or under different lighting conditions.</li>
+</ul></li>
+</ul>
+</section>
+<section id="example-2-text-classification-e.g.-sentiment-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="example-2-text-classification-e.g.-sentiment-analysis">Example 2: Text Classification (e.g., Sentiment Analysis)</h4>
+<p>Suppose we have a small dataset of 200 text samples (100 positive reviews, 100 negative reviews) for a binary sentiment classification task, which is insufficient to train a model like a recurrent neural network (RNN) or transformer. We can use data augmentation to expand the dataset as follows:</p>
+<ul>
+<li><p><strong>Transformations</strong>:</p>
+<ol type="1">
+<li><strong>Synonym Replacement</strong>: Replace words with their synonyms while preserving the sentiment. For example, in the sentence “I love this movie,” replace “love” with “adore” to get “I adore this movie” (still positive).</li>
+<li><strong>Paraphrasing</strong>: Rewrite the sentence in a different way while keeping the meaning. For example, “This film is amazing” can be paraphrased as “This movie is fantastic” (still positive).</li>
+<li><strong>Back-Translation</strong>: Translate the sentence to another language and back to the original language. For example, “I hate this product” (negative) might become “I dislike this item” after translating to French and back to English (still negative).</li>
+<li><strong>Word Insertion/Deletion</strong>: Insert or delete neutral words that don’t change the sentiment. For example, “I really like this” can become “I really truly like this” (still positive).</li>
+</ol></li>
+<li><p><strong>Implementation</strong>:</p>
+<ul>
+<li>Using NLP libraries like <code>nlpaug</code> or <code>textattack</code> (in Python), we can apply these transformations. For example, a single positive review can be augmented into 3 new samples: one with synonym replacement, one with paraphrasing, and one with back-translation.</li>
+<li>If we apply 3 transformations to each of the 200 samples, we can expand the dataset to 800 samples (200 original + 600 augmented).</li>
+</ul></li>
+<li><p><strong>Impact</strong>:</p>
+<ul>
+<li>The model now has more text samples to learn from, improving its ability to generalize.</li>
+<li>The transformations introduce linguistic variability (e.g., different word choices, sentence structures), making the model more robust to diverse writing styles.</li>
+<li>For example, a transformer model trained on this augmented dataset will better handle reviews with varied vocabulary or phrasing.</li>
+</ul></li>
+</ul>
+</section>
+<section id="additional-considerations" class="level4">
+<h4 class="anchored" data-anchor-id="additional-considerations">Additional Considerations</h4>
+<ul>
+<li><strong>Preserving Labels</strong>: Ensure that the transformations do not change the class label. For example, flipping an image is fine, but negating a sentence (e.g., “I love this” to “I don’t love this”) changes the sentiment and label.</li>
+<li><strong>Avoiding Over-Augmentation</strong>: Too much augmentation can introduce noise or bias. For example, excessive rotation of an image might make it unrecognizable, or over-paraphrasing might alter the meaning of a sentence.</li>
+<li><strong>Domain-Specific Augmentation</strong>: The choice of transformations depends on the domain. For audio classification, you might add background noise or change the pitch; for tabular data, you might add Gaussian noise to numerical features.</li>
+</ul>
+</section>
+<section id="conclusion" class="level4">
+<h4 class="anchored" data-anchor-id="conclusion">Conclusion</h4>
+<p>Data augmentation is a powerful technique to expand an insufficient training dataset for classification tasks. By applying transformations like rotation and flipping for image classification, or synonym replacement and paraphrasing for text classification, we can significantly increase the dataset size and introduce variability, leading to better model performance. These techniques are especially valuable in real-world scenarios where collecting more labeled data is not feasible.</p>
+</section>
+<section id="references" class="level4">
+<h4 class="anchored" data-anchor-id="references">References</h4>
+<ul>
+<li>Goodfellow, I., Bengio, Y., &amp; Courville, A. (2016). <em>Deep Learning</em>. MIT Press. (Chapter on data augmentation techniques.)</li>
+<li>Shorten, C., &amp; Khoshgoftaar, T. M. (2019). “A survey on Image Data Augmentation for Deep Learning.” <em>Journal of Big Data</em>. (For image augmentation techniques.)</li>
+<li>Wei, J., &amp; Zou, K. (2019). “EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks.” <em>arXiv preprint arXiv:1901.11196</em>. (For text augmentation techniques.)</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="submission" class="level3">
+<h3 class="anchored" data-anchor-id="submission">Submission</h3>
+<p>The answer above should be documented in a file named <code>Q3_readme.pdf</code> and placed in a folder named <code>Q3</code>. Since no coding is required, the folder will contain only the PDF file.</p>
+<p><strong>Folder Structure</strong>:</p>
+<pre><code>Q3/
+└── Q3_readme.pdf</code></pre>
+<p>To create the PDF: 1. Copy the answer above into a document editor (e.g., Microsoft Word, Google Docs). 2. Format it for clarity (e.g., use headings, bullet points). 3. Export the document as a PDF named <code>Q3_readme.pdf</code>. 4. Place the PDF in a folder named <code>Q3</code>.</p>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="cHl0aG9u" data-listing-date-sort="1743177600000" data-listing-file-modified-sort="1743221095531" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1758">
-<div class="thumbnail">
-<p><a href="./posts/msbd5002-q2/Q2_code.html" class="no-external"></a></p><a href="./posts/msbd5002-q2/Q2_code.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/msbd5002-q2/Q2_code.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/msbd5002-q2/Q2_code.html" class="no-external">Q2. Grid-Based Outlier Discovery Approach (8 points)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/msbd5002-q2/Q2_code.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">
-python
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/msbd5002-q2/Q2_code.html" class="no-external">In this question, you should implement a grid-based outlier detection method to find outliers in a large data set. Data Descriptions : 1. Relevant data is in folder Data_Q2.…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/msbd5002-q2/Q2_code.html" class="no-external">
-<div class="listing-date">
-Mar 29, 2025
-</div>
-<div class="listing-author">
-TW
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="cHl0aG9u" data-listing-date-sort="1743177600000" data-listing-file-modified-sort="1743254860298" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1328">
-<div class="thumbnail">
-<p><a href="./posts/msbd5002-q4/Q4_code.html" class="no-external"></a></p><a href="./posts/msbd5002-q4/Q4_code.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/msbd5002-q4/Q4_code.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/msbd5002-q4/Q4_code.html" class="no-external">Q4. Expection-Maximization Algorithm (8 points)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/msbd5002-q4/Q4_code.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">
-python
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/msbd5002-q4/Q4_code.html" class="no-external">In this question, you are required to code by yourself to complete the EM algorithm.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/msbd5002-q4/Q4_code.html" class="no-external">
-<div class="listing-date">
-Mar 29, 2025
-</div>
-<div class="listing-author">
-TW
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="ZXhhbQ==" data-listing-date-sort="1743177600000" data-listing-file-modified-sort="1743255279489" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1619">
-<div class="thumbnail">
-<p><a href="./posts/msbd5002-q3/index.html" class="no-external"></a></p><a href="./posts/msbd5002-q3/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/msbd5002-q3/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/msbd5002-q3/index.html" class="no-external">Q3. Data Augmentation (5 points)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/msbd5002-q3/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('ZXhhbQ=='); return false;">
-exam
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/msbd5002-q3/index.html" class="no-external">We all know that adequate training data is a precondition for training machine learning models. But in real-world problems, the data that can be used to train the model is…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/msbd5002-q3/index.html" class="no-external">
-<div class="listing-date">
-Mar 29, 2025
-</div>
-<div class="listing-author">
-TW
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="cHl0aG9u" data-listing-date-sort="1743177600000" data-listing-file-modified-sort="1743253478859" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2035">
-<div class="thumbnail">
-<p><a href="./posts/msbd5002-q8/Q8_code.html" class="no-external"></a></p><a href="./posts/msbd5002-q8/Q8_code.html" class="no-external">
-<p class="card-img-top"><img src="posts/msbd5002-q8/Q8_code_files/figure-html/cell-7-output-4.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/msbd5002-q8/Q8_code.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/msbd5002-q8/Q8_code.html" class="no-external">Q8. Recommendaton System (18 points)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/msbd5002-q8/Q8_code.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">
-python
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/msbd5002-q8/Q8_code.html" class="no-external">You have learned some basic models including user-based and item-based collaborative filtering methods in class. However, some features of items or users can also help to…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/msbd5002-q8/Q8_code.html" class="no-external">
-<div class="listing-date">
-Mar 29, 2025
-</div>
-<div class="listing-author">
-TW
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Ym9vaw==" data-listing-date-sort="1743091200000" data-listing-file-modified-sort="1743210220383" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1301">
-<div class="thumbnail">
-<p><a href="./posts/the-great-gatsby/index.html" class="no-external"></a></p><a href="./posts/the-great-gatsby/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/the-great-gatsby/image.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/the-great-gatsby/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/the-great-gatsby/index.html" class="no-external">The Great Gatsby: American Dream and Moral Decay</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/the-great-gatsby/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ym9vaw=='); return false;">
-book
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/the-great-gatsby/index.html" class="no-external">F. Scott Fitzgerald’s masterpiece “The Great Gatsby” (1925) stands as one of the most profound literary examinations of the American Dream and its inherent contradictions.…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/the-great-gatsby/index.html" class="no-external">
-<div class="listing-date">
-Mar 28, 2025
-</div>
-<div class="listing-author">
-TW
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="d29yaw==" data-listing-date-sort="1743091200000" data-listing-file-modified-sort="1743131486255" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="720">
-<div class="thumbnail">
-<p><a href="./posts/ha-convention-2023/index.html" class="no-external"></a></p><a href="./posts/ha-convention-2023/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/ha-convention-2023/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/ha-convention-2023/index.html" class="no-external">HA Convention 2023: A Glimpse into the Future of Healthcare</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/ha-convention-2023/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('d29yaw=='); return false;">
-work
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/ha-convention-2023/index.html" class="no-external">In May 2023, I attended the HA Convention 2023, an inspiring gathering of healthcare professionals, innovators, and thought leaders. The event was packed with insights on…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/ha-convention-2023/index.html" class="no-external">
-<div class="listing-date">
-Mar 28, 2025
-</div>
-<div class="listing-author">
-TW
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="d29yaw==" data-listing-date-sort="1743091200000" data-listing-file-modified-sort="1743131495968" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1087">
-<div class="thumbnail">
-<p><a href="./posts/ha-convention-2024/index.html" class="no-external"></a></p><a href="./posts/ha-convention-2024/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/ha-convention-2024/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/ha-convention-2024/index.html" class="no-external">HA Convention 2024: A Deep Dive into Healthcare Innovation</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/ha-convention-2024/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('d29yaw=='); return false;">
-work
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/ha-convention-2024/index.html" class="no-external">I had the privilege of attending the HA Convention 2024 in May 2024, where healthcare leaders and innovators gathered to share groundbreaking advancements and strategies.…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/ha-convention-2024/index.html" class="no-external">
-<div class="listing-date">
-Mar 28, 2025
-</div>
-<div class="listing-author">
-TW
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="d29yaw==" data-listing-date-sort="1743091200000" data-listing-file-modified-sort="1743130979175" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20" data-listing-word-count-sort="3833">
-<div class="thumbnail">
-<p><a href="./posts/isqua/index.html" class="no-external"></a></p><a href="./posts/isqua/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/isqua/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/isqua/index.html" class="no-external">An In-Depth Journey Through ISQua 2023: Unveiling Healthcare Quality, Innovation, and Global Challenges</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/isqua/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('d29yaw=='); return false;">
-work
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/isqua/index.html" class="no-external"><em>Date: August 27–30, 2023</em><br>
-<em>Location: Seoul, South Korea</em></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/isqua/index.html" class="no-external">
-<div class="listing-date">
-Mar 28, 2025
-</div>
-<div class="listing-author">
-TW
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
