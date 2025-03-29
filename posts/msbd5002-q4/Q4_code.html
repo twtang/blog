@@ -249,7 +249,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <section id="em-algorithm-for-clustering" class="level4">
 <h4 class="anchored" data-anchor-id="em-algorithm-for-clustering">EM Algorithm for Clustering</h4>
-<p>The EM algorithm is typically used for Gaussian Mixture Models (GMMs), where it iteratively estimates the parameters (means, covariances, and mixing coefficients) of the mixture components. However, the problem description (hard assignments to clusters, L1-distance for convergence, and SSE as a metric) suggests a k-means-like approach with EM terminology. In k-means, the “E-step” assigns points to the nearest cluster, and the “M-step” updates the cluster centers as the mean of assigned points. We’ll implement this interpretation of the EM algorithm: - <strong>E-step</strong>: Assign each data point to the nearest cluster based on Euclidean distance. - <strong>M-step</strong>: Update the cluster centers as the mean of the points assigned to each cluster. - <strong>SSE</strong>: Compute the Sum of Squared Errors as the sum of squared Euclidean distances from each point to its assigned cluster center. - <strong>Convergence</strong>: Stop when the L1-distance between old and new centers is less than 0.0001 or after 100 iterations.</p>
+<p>The EM algorithm is typically used for Gaussian Mixture Models (GMMs), where it iteratively estimates the parameters (means, covariances, and mixing coefficients) of the mixture components. However, the problem description (hard assignments to clusters, L1-distance for convergence, and SSE as a metric) suggests a k-means-like approach with EM terminology. In k-means, the “E-step” assigns points to the nearest cluster, and the “M-step” updates the cluster centers as the mean of assigned points. We’ll implement this interpretation of the EM algorithm:</p>
+<ul>
+<li><strong>E-step</strong>: Assign each data point to the nearest cluster based on Euclidean distance.</li>
+<li><strong>M-step</strong>: Update the cluster centers as the mean of the points assigned to each cluster.</li>
+<li><strong>SSE</strong>: Compute the Sum of Squared Errors as the sum of squared Euclidean distances from each point to its assigned cluster center.</li>
+<li><strong>Convergence</strong>: Stop when the L1-distance between old and new centers is less than 0.0001 or after 100 iterations.</li>
+</ul>
 <hr>
 </section>
 </section>
@@ -424,13 +430,80 @@ c2: [ 4.74418605 17.18604651 44.13953488 32.05813953  0.34883721  1.3372093 ]</c
 <section id="report-content" class="level4">
 <h4 class="anchored" data-anchor-id="report-content">Report Content</h4>
 <ol type="1">
-<li><strong>Introduction</strong>:
+<li><p><strong>Introduction</strong>:</p>
 <ul>
-<li>The task is to implement the Expectation-Maximization (EM) algorithm for clustering the data in <code>Data_Q4.csv</code> into two clusters (c1 and c2).</li>
-<li>Initial centers:</li>
+<li>The task is to implement the Expectation-Maximization (EM) algorithm for clustering the data in <code>Q4_Data.csv</code> into two clusters (c1 and c2).</li>
+<li>The dataset contains 626 instances with 6 attributes.</li>
+<li>Initial centers:
+<ul>
+<li>c1 = (0.0, 0.0, 0.0, 0.0, 0.0, 0.0)</li>
+<li>c2 = (1.1, 1.1, 1.1, 1.1, 1.1, 1.1)</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Algorithm Description</strong>:</p>
+<ul>
+<li><strong>E-step</strong>: Assign each data point to the nearest cluster based on Euclidean distance.</li>
+<li><strong>M-step</strong>: Update the cluster centers as the mean of the points assigned to each cluster.</li>
+<li><strong>SSE</strong>: Compute the Sum of Squared Errors as the sum of squared distances from each point to its assigned cluster center.</li>
+<li><strong>Convergence</strong>: Stop when the L1-distance between old and new centers is less than 0.0001 or after 100 iterations.</li>
+</ul></li>
+<li><p><strong>Results</strong>:</p>
+<ul>
+<li><strong>First Iteration</strong>:
+<ul>
+<li>Centers:
+<ul>
+<li>c1: [Output from iteration_logs[0][0][0]]</li>
+<li>c2: [Output from iteration_logs[0][0][1]]</li>
+</ul></li>
+<li>SSE: [Output from iteration_logs[0][1]]</li>
+</ul></li>
+<li><strong>Second Iteration</strong>:
+<ul>
+<li>Centers:
+<ul>
+<li>c1: [Output from iteration_logs[1][0][0]]</li>
+<li>c2: [Output from iteration_logs[1][0][1]]</li>
+</ul></li>
+<li>SSE: [Output from iteration_logs[1][1]]</li>
+</ul></li>
+<li><strong>Final Centers</strong>:
+<ul>
+<li>c1: [Output from final_centers[0]]</li>
+<li>c2: [Output from final_centers[1]]</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Code</strong>:</p>
+<ul>
+<li>[Include the entire code from above]</li>
 </ul></li>
 </ol>
+<hr>
 </section>
+</section>
+<section id="final-submission" class="level3">
+<h3 class="anchored" data-anchor-id="final-submission">Final Submission</h3>
+<p>Your submission folder <code>Q4</code> should contain: - <code>Q4_readme.pdf</code>: The report with the code, updated centers, and SSE for the first two iterations, and the final centers.</p>
+<p><strong>Folder Structure</strong>:</p>
+<pre><code>Q4/
+└── Q4_readme.pdf</code></pre>
+<p>To create the PDF:</p>
+<ol type="1">
+<li>Copy the report content above into a document editor.</li>
+<li>Include the actual output (centers and SSE) from running the code.</li>
+<li>Format it for clarity (e.g., use headings, bullet points).</li>
+<li>Export the document as a PDF named <code>Q4_readme.pdf</code>.</li>
+<li>Place the PDF in the <code>Q4</code> folder.</li>
+</ol>
+<hr>
+</section>
+<section id="notes-and-potential-improvements" class="level3">
+<h3 class="anchored" data-anchor-id="notes-and-potential-improvements">Notes and Potential Improvements</h3>
+<ol type="1">
+<li><strong>EM vs.&nbsp;K-Means</strong>: The problem uses EM terminology but describes a k-means-like algorithm. A true EM algorithm for clustering would involve Gaussian Mixture Models (GMMs) with soft assignments (probabilities), covariance matrices, and maximization of the likelihood. If the problem intended a GMM, we’d need to modify the implementation to include these components.</li>
+<li><strong>Empty Clusters</strong>: The code handles empty clusters by keeping the old center, but in a real scenario, you might reinitialize the center randomly.</li>
+<li><strong>Data Preprocessing</strong>: The problem doesn’t specify preprocessing, but in practice, you might normalize the data if the features have different scales.</li>
+</ol>
 </section>
 </section>
 <section id="end" class="level1">
