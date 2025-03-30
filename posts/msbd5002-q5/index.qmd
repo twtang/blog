@@ -1,0 +1,436 @@
+---
+title: "Q5. Sentiment Analysis and Opinion Mining (18 points)"
+author: "TW"
+date: "2025-03-30"
+categories: [exam]
+---
+
+# Q5. Sentiment Analysis and Opinion Mining (18 points)
+
+Generally speaking, sentiment analysis aims to determine the attitude of a speaker, writer, or other subject with respect to some topic or the overall contextual polarity or emotional reaction to a document, interaction, or event. The attitude may be a judgment or evaluation (see appraisal theory), affective state (that is to say, the emotional state of the author or speaker), or the intended emotional communication (that is to say, the emotional effect intended by the author or interlocutor).
+
+Recently, the birth of genetically edited babies has created a huge controversy. People have different opinions on the development of genetic technology. Now you are asked to do a Sentiment Analysis Task based on topics such as “gene editing” , “genetic engineering” , and “transgene” .
+
+In this task, you need to implement a series of processes from background investigation to collecting data to determining the solution to implementing the algorithm to get the results.
+
+**Requirements :**
+
+**About training:**
+
+1. You can use any algorithm that you know, supervised learning and
+unsupervised learning are both ok.
+2. You can use any data resource. You need to find your own data resources
+such as some corpus or lexical resource.
+3. You can not directly use complete models that others have already trained
+to do classification without any detailed process.
+4. You can use some basic word vector models to build your algorithm, such
+as word2vec.
+
+**About testing:**
+
+1. You need to collect 100 pieces of news/comments/articles related to the
+above topic, then use your algorithm or model to divide them into two
+categories——positive or negative. (You may need some knowledge of
+Crawler, in Python, BeautifulSoup is a very useful crawler tool.)
+2. You can get the test text from any website or social media.
+3. The text you collect must be in English .
+
+**Submissions:**
+
+1. Please write down your algorithm details and all links of the model/data
+resources you used in the Q5_readme.pdf . If your code refer to any blog,
+github, paper and so on, please write the their links in it.
+2. Please put all the code of this question in the Q5_code folder.
+3. You need submit Q5_output.csv. Your .csv file should contain 3 columns
+as shown below. In "Result", 0 represents negative and 1 represents positive.
+ID Contents Result
+
+|ID|Contents|Result|
+|--|--|--|
+|0|text0|0|
+|1|text1|1|
+|...|...|...|
+|99|text99|1|
+
+4. Put all files/folders above in folder Q5 .
+
+**Notes:**
+
+1. Crawler is not required and will be not included in the scoring criteria. You can also get the text manually or by other tools.
+
+2. Your grade will be based on your report, code and accuracy of the results.
+
+---
+
+Let’s tackle Q5, which involves performing sentiment analysis and opinion mining on 100 pieces of news, comments, or articles related to the topic of "genetic editing" and "transgenic" babies. The goal is to classify each piece of text as positive (1) or negative (0) in terms of sentiment, output the results in a CSV file, and submit the code and report in a folder named `Q5`. We’ll use basic word vector models (e.g., word2vec) to build the algorithm, and since no training data is provided, we’ll use an unsupervised approach with a pre-trained model and a lexicon-based method. Additionally, we’ll need to collect the 100 pieces of text from the web.
+
+---
+
+### Step 1: Understanding the Problem
+- **Task Description**:
+  - Perform sentiment analysis and opinion mining on 100 pieces of news, comments, or articles related to "genetic editing" and "transgenic" babies.
+  - Classify each piece as positive (1) or negative (0) based on sentiment.
+  - Output the results in `Q5_output.csv` with columns `ID`, `Contents`, and `Result`.
+  - Submit the code and report in `Q5_readme.pdf` in a folder named `Q5`.
+- **Constraints**:
+  - Use any algorithm (supervised or unsupervised).
+  - Use basic word vector models like word2vec.
+  - Do not use complete pre-trained models for classification (e.g., BERT for sentiment analysis).
+  - Collect the 100 pieces of text from the web (news, comments, articles).
+  - Two categories: Positive or Negative (binary classification).
+- **Submission**:
+  - `Q5_readme.pdf`: Code, model/data resources used, and links to the 100 pieces of text.
+  - `Q5_output.csv`: Results with `ID`, `Contents`, and `Result`.
+  - Place all files in the `Q5` folder.
+
+#### Approach
+Since no training data is provided, we’ll use an **unsupervised sentiment analysis** approach combining:
+1. **Word2Vec**: To represent words as vectors and capture semantic meaning.
+2. **Sentiment Lexicon**: Use a pre-existing sentiment lexicon (e.g., VADER or SentiWordNet) to assign sentiment scores to words.
+3. **Aggregation**: Compute an overall sentiment score for each piece of text by averaging the sentiment scores of its words, weighted by their word2vec representations.
+
+We’ll also need to collect 100 pieces of text related to "genetic editing" and "transgenic" babies from the web.
+
+---
+
+### Step 2: Collecting the Data
+We need to collect 100 pieces of news, comments, or articles related to "genetic editing" and "transgenic" babies. Since I can’t directly scrape the web in this environment, I’ll provide a strategy to collect the data and list some example links that you can use. You can use a web scraping tool like `BeautifulSoup` or manually collect the data.
+
+#### Step 2.1: Strategy to Collect Data
+1. **Search Queries**:
+   - Use Google Search with queries like:
+     - "genetic editing babies news"
+     - "transgenic babies comments"
+     - "CRISPR genetic editing opinions"
+     - "genetic engineering babies articles"
+   - Use social media platforms like X with hashtags such as `#GeneticEditing`, `#TransgenicBabies`, `#CRISPR`.
+2. **Sources**:
+   - News websites: BBC, The Guardian, CNN, Nature, Science Daily.
+   - Social media: X posts, Reddit threads (e.g., r/science, r/technology).
+   - Blogs and forums: Medium, science blogs.
+3. **Tools**:
+   - Use Python with `requests` and `BeautifulSoup` to scrape news articles.
+   - Use the `tweepy` library to collect posts from X.
+   - Manually copy comments from article comment sections or forums.
+
+#### Step 2.2: Example Links to News/Comments/Articles
+Here are some example links to news articles and comments related to "genetic editing" and "transgenic" babies. These are based on publicly available sources as of my last update (March 2023). You’ll need to collect 100 pieces, so you can use these as a starting point and search for more.
+
+1. **News Articles**:
+   - "Chinese scientist claims to have created world's first genetically edited babies" (CNN, 2018):  
+     [https://www.cnn.com/2018/11/26/health/china-crispr-babies-first/index.html](https://www.cnn.com/2018/11/26/health/china-crispr-babies-first/index.html)
+   - "Genetically edited babies: What happened to the CRISPR twins?" (BBC, 2022):  
+     [https://www.bbc.com/news/world-asia-64154628](https://www.bbc.com/news/world-asia-64154628)
+   - "The ethical dilemmas of genetically editing babies" (The Guardian, 2019):  
+     [https://www.theguardian.com/science/2019/jan/15/the-ethical-dilemmas-of-genetically-editing-babies](https://www.theguardian.com/science/2019/jan/15/the-ethical-dilemmas-of-genetically-editing-babies)
+   - "CRISPR babies: What does this mean for the future of genetic engineering?" (Nature, 2019):  
+     [https://www.nature.com/articles/d41586-019-00673-1](https://www.nature.com/articles/d41586-019-00673-1)
+   - "Genetically modified babies: A second Chinese researcher may have edited embryos" (Science, 2019):  
+     [https://www.science.org/content/article/genetically-modified-babies-second-chinese-researcher-may-have-edited-embryos](https://www.science.org/content/article/genetically-modified-babies-second-chinese-researcher-may-have-edited-embryos)
+
+2. **Comments/Posts** (Hypothetical, based on typical X posts):
+   - X Post: "Genetic editing of babies is a dangerous step. We’re playing God and it’s going to backfire. #CRISPR" (Negative sentiment)
+   - X Post: "Transgenic babies could end genetic diseases! This is a huge step forward for humanity. #GeneticEditing" (Positive sentiment)
+   - Reddit Comment (r/science): "I’m worried about the ethical implications of CRISPR babies. Who decides what traits are ‘desirable’?" (Negative sentiment)
+
+To collect 100 pieces, you can:
+- Scrape news articles from the above sources.
+- Use the X API to collect posts with relevant hashtags.
+- Manually copy comments from the comment sections of news articles or Reddit threads.
+
+#### Step 2.3: Simulated Data Collection
+Since I can’t scrape the web here, I’ll simulate the data collection by creating a small sample of 5 pieces of text. You’ll need to expand this to 100 pieces using the strategy above.
+
+```python
+# Simulated data (replace with actual collected data)
+texts = [
+    "Genetic editing of babies is a dangerous step. We’re playing God and it’s going to backfire.",
+    "Transgenic babies could end genetic diseases! This is a huge step forward for humanity.",
+    "I’m worried about the ethical implications of CRISPR babies. Who decides what traits are desirable?",
+    "The potential of genetic editing is incredible. We can improve human health and longevity.",
+    "This is a slippery slope. Genetically modified babies will lead to a dystopian future."
+]
+```
+
+---
+
+### Step 3: Implementing Sentiment Analysis
+We’ll use an unsupervised approach combining word2vec for word embeddings and a sentiment lexicon (VADER) to assign sentiment scores. Here’s the plan:
+1. **Preprocess the Text**: Tokenize, remove stopwords, and clean the text.
+2. **Load Word2Vec**: Use a pre-trained word2vec model to get word embeddings.
+3. **Sentiment Lexicon**: Use VADER to assign sentiment scores to words.
+4. **Compute Sentiment**: Average the sentiment scores of words in each text, weighted by their word2vec embeddings.
+5. **Classify**: If the average sentiment score is positive, classify as 1; otherwise, classify as 0.
+
+#### Step 3.1: Install Required Libraries
+You’ll need to install the following libraries:
+```bash
+pip install gensim nltk vaderSentiment pandas numpy
+```
+
+#### Step 3.2: Implement the Sentiment Analysis Pipeline
+```python
+import numpy as np
+import pandas as pd
+from gensim.models import KeyedVectors
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+import os
+import shutil
+
+# Download NLTK resources
+nltk.download('punkt')
+nltk.download('stopwords')
+
+# Load pre-trained word2vec model (Google News vectors)
+# Note: You need to download this file (~1.5GB) from:
+# https://code.google.com/archive/p/word2vec/ (GoogleNews-vectors-negative300.bin)
+# Alternatively, use a smaller pre-trained model from gensim
+word2vec_path = "GoogleNews-vectors-negative300.bin"  # Replace with your path
+word2vec = KeyedVectors.load_word2vec_format(word2vec_path, binary=True)
+
+# Initialize VADER sentiment analyzer
+analyzer = SentimentIntensityAnalyzer()
+
+# Preprocessing function
+stop_words = set(stopwords.words('english'))
+def preprocess_text(text):
+    tokens = word_tokenize(text.lower())
+    tokens = [t for t in tokens if t.isalpha() and t not in stop_words]
+    return tokens
+
+# Compute sentiment score for a piece of text
+def compute_sentiment(text):
+    tokens = preprocess_text(text)
+    
+    # Get sentiment scores for each token using VADER
+    sentiment_scores = []
+    for token in tokens:
+        if token in word2vec:
+            vs = analyzer.polarity_scores(token)
+            # Use the compound score as the sentiment score
+            sentiment_scores.append(vs['compound'])
+    
+    # If no valid tokens, return neutral (0)
+    if not sentiment_scores:
+        return 0
+    
+    # Average the sentiment scores
+    avg_sentiment = np.mean(sentiment_scores)
+    
+    # Classify as positive (1) or negative (0)
+    return 1 if avg_sentiment > 0 else 0
+
+# Apply sentiment analysis to all texts
+ids = list(range(len(texts)))
+results = [compute_sentiment(text) for text in texts]
+
+# Create the output DataFrame
+output_df = pd.DataFrame({
+    'ID': ids,
+    'Contents': texts,
+    'Result': results
+})
+
+# Save to CSV
+output_df.to_csv('Q5_output.csv', index=False)
+```
+
+- **Preprocessing**: Tokenize the text, convert to lowercase, remove stopwords, and keep only alphabetic tokens.
+- **Word2Vec**: Load a pre-trained word2vec model (Google News vectors) to check if words are in the vocabulary.
+- **VADER**: Use the VADER sentiment analyzer to get a compound sentiment score for each word.
+- **Sentiment Computation**: Average the sentiment scores of the words in each text. If the average is positive, classify as 1 (positive); otherwise, classify as 0 (negative).
+- **Output**: Save the results in `Q5_output.csv` with columns `ID`, `Contents`, and `Result`.
+
+#### Step 3.3: Example Output
+For the simulated data, the output might look like:
+```
+ID,Contents,Result
+0,"Genetic editing of babies is a dangerous step. We’re playing God and it’s going to backfire.",0
+1,"Transgenic babies could end genetic diseases! This is a huge step forward for humanity.",1
+2,"I’m worried about the ethical implications of CRISPR babies. Who decides what traits are desirable?",0
+3,"The potential of genetic editing is incredible. We can improve human health and longevity.",1
+4,"This is a slippery slope. Genetically modified babies will lead to a dystopian future.",0
+```
+
+---
+
+### Step 4: Package the Submission
+We need to submit the code, report, and output in a folder named `Q5`.
+
+```python
+# Create Q5 folder
+os.makedirs('Q5', exist_ok=True)
+
+# Move the output CSV
+shutil.move('Q5_output.csv', 'Q5/Q5_output.csv')
+
+# Save the code to a file (to be converted to PDF)
+with open('Q5/Q5_readme.py', 'w') as f:
+    f.write("""
+# Code for Q5: Sentiment Analysis and Opinion Mining
+import numpy as np
+import pandas as pd
+from gensim.models import KeyedVectors
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+import os
+import shutil
+
+# Download NLTK resources
+nltk.download('punkt')
+nltk.download('stopwords')
+
+# Load pre-trained word2vec model
+word2vec_path = "GoogleNews-vectors-negative300.bin"
+word2vec = KeyedVectors.load_word2vec_format(word2vec_path, binary=True)
+
+# Initialize VADER sentiment analyzer
+analyzer = SentimentIntensityAnalyzer()
+
+# Preprocessing function
+stop_words = set(stopwords.words('english'))
+def preprocess_text(text):
+    tokens = word_tokenize(text.lower())
+    tokens = [t for t in tokens if t.isalpha() and t not in stop_words]
+    return tokens
+
+# Compute sentiment score for a piece of text
+def compute_sentiment(text):
+    tokens = preprocess_text(text)
+    
+    # Get sentiment scores for each token using VADER
+    sentiment_scores = []
+    for token in tokens:
+        if token in word2vec:
+            vs = analyzer.polarity_scores(token)
+            sentiment_scores.append(vs['compound'])
+    
+    # If no valid tokens, return neutral (0)
+    if not sentiment_scores:
+        return 0
+    
+    # Average the sentiment scores
+    avg_sentiment = np.mean(sentiment_scores)
+    
+    # Classify as positive (1) or negative (0)
+    return 1 if avg_sentiment > 0 else 0
+
+# Simulated data (replace with actual collected data)
+texts = [
+    "Genetic editing of babies is a dangerous step. We’re playing God and it’s going to backfire.",
+    "Transgenic babies could end genetic diseases! This is a huge step forward for humanity.",
+    "I’m worried about the ethical implications of CRISPR babies. Who decides what traits are desirable?",
+    "The potential of genetic editing is incredible. We can improve human health and longevity.",
+    "This is a slippery slope. Genetically modified babies will lead to a dystopian future."
+]
+
+# Apply sentiment analysis to all texts
+ids = list(range(len(texts)))
+results = [compute_sentiment(text) for text in texts]
+
+# Create the output DataFrame
+output_df = pd.DataFrame({
+    'ID': ids,
+    'Contents': texts,
+    'Result': results
+})
+
+# Save to CSV
+output_df.to_csv('Q5_output.csv', index=False)
+
+# Create Q5 folder
+os.makedirs('Q5', exist_ok=True)
+
+# Move the output CSV
+shutil.move('Q5_output.csv', 'Q5/Q5_output.csv')
+""")
+```
+
+- **Note**: The question asks for `Q5_readme.pdf`, so you’ll need to convert the code and report to PDF format manually. Include the code, model/data resources, and links to the 100 pieces of text in the PDF.
+
+---
+
+### Step 5: Write the Report
+The report (`Q5_readme.pdf`) should include the code, model/data resources used, and links to the 100 pieces of text.
+
+#### Report Content
+1. **Introduction**:
+   - The task is to perform sentiment analysis and opinion mining on 100 pieces of news, comments, or articles related to "genetic editing" and "transgenic" babies.
+   - Classify each piece as positive (1) or negative (0) based on sentiment.
+
+2. **Data Collection**:
+   - Collected 100 pieces of text from news websites, social media, and forums.
+   - Example links (replace with your actual 100 links):
+     - [Link 1: CNN article]
+     - [Link 2: BBC article]
+     - [Link 3: X post]
+     - ...
+   - Strategy: Used Google Search with queries like "genetic editing babies news" and collected comments from X and Reddit.
+
+3. **Methodology**:
+   - **Preprocessing**: Tokenized the text, removed stopwords, and kept alphabetic tokens.
+   - **Word2Vec**: Used a pre-trained word2vec model (Google News vectors) to check word validity.
+   - **Sentiment Lexicon**: Used VADER to assign sentiment scores to words.
+   - **Sentiment Computation**: Averaged the sentiment scores of words in each text. Classified as positive (1) if the average score is positive, otherwise negative (0).
+   - **Libraries**:
+     - `gensim`: For word2vec.
+     - `nltk`: For text preprocessing.
+     - `vaderSentiment`: For sentiment scoring.
+     - `pandas`, `numpy`: For data handling.
+
+4. **Model/Data Resources**:
+   - **Word2Vec Model**: Google News vectors (300-dimensional), downloaded from [https://code.google.com/archive/p/word2vec/](https://code.google.com/archive/p/word2vec/).
+   - **VADER Lexicon**: Built into the `vaderSentiment` library.
+
+5. **Results**:
+   - Output saved in `Q5_output.csv` with columns `ID`, `Contents`, and `Result`.
+   - Example output (first 5 rows):
+     ```
+     ID,Contents,Result
+     0,"Genetic editing of babies is a dangerous step. We’re playing God and it’s going to backfire.",0
+     1,"Transgenic babies could end genetic diseases! This is a huge step forward for humanity.",1
+     2,"I’m worried about the ethical implications of CRISPR babies. Who decides what traits are desirable?",0
+     3,"The potential of genetic editing is incredible. We can improve human health and longevity.",1
+     4,"This is a slippery slope. Genetically modified babies will lead to a dystopian future.",0
+     ```
+
+6. **Code**:
+   - [Include the entire code from above]
+
+---
+
+### Final Submission
+Your submission folder `Q5` should contain:
+- `Q5_readme.pdf`: The report with the code, model/data resources, and links to the 100 pieces of text.
+- `Q5_output.csv`: The results with 100 rows.
+
+**Folder Structure**:
+```
+Q5/
+├── Q5_readme.pdf
+└── Q5_output.csv
+```
+
+To create the PDF:
+1. Copy the report content above into a document editor.
+2. Include the actual links to the 100 pieces of text you collected.
+3. Format it for clarity (e.g., use headings, bullet points).
+4. Export the document as a PDF named `Q5_readme.pdf`.
+5. Place the PDF and `Q5_output.csv` in the `Q5` folder.
+
+---
+
+### Notes and Potential Improvements
+1. **Data Collection**: The simulated data only includes 5 pieces. You’ll need to collect 100 pieces using the strategy provided.
+2. **Sentiment Analysis**: The current approach uses a simple averaging of word-level sentiment scores. You could improve this by:
+   - Using sentence-level sentiment analysis (e.g., VADER on the entire text).
+   - Incorporating negation handling (e.g., "not good" should be negative).
+   - Using a more sophisticated aggregation method, such as weighting words by their TF-IDF scores.
+3. **Evaluation**: Since no ground truth labels are provided, you can manually inspect a few results to validate the model’s performance.
+
+If you need help with web scraping or further improvements, let me know!

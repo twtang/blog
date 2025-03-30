@@ -5,7 +5,7 @@ date: "2025-03-29"
 categories: [exam]
 ---
 
-## Q3. Data Augmentation (5 points)
+# Q3. Data Augmentation (5 points)
 
 We all know that adequate training data is a precondition for training machine learning models. But in real-world problems, the data that can be used to train the model is often not enough. Suppose you are doing a classification task and your training dataset is extremely insufficient. Please explain how you will expand the amount of data.
 

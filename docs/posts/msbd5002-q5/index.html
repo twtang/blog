@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="TW">
+<meta name="dcterms.date" content="2025-03-30">
+
+<title>Q5. Sentiment Analysis and Opinion Mining (18 points) – Blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Q5. Sentiment Analysis and Opinion Mining (18 points)</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">exam</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>TW </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 30, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="q5.-sentiment-analysis-and-opinion-mining-18-points" class="level1">
+<h1>Q5. Sentiment Analysis and Opinion Mining (18 points)</h1>
+<p>Generally speaking, sentiment analysis aims to determine the attitude of a speaker, writer, or other subject with respect to some topic or the overall contextual polarity or emotional reaction to a document, interaction, or event. The attitude may be a judgment or evaluation (see appraisal theory), affective state (that is to say, the emotional state of the author or speaker), or the intended emotional communication (that is to say, the emotional effect intended by the author or interlocutor).</p>
+<p>Recently, the birth of genetically edited babies has created a huge controversy. People have different opinions on the development of genetic technology. Now you are asked to do a Sentiment Analysis Task based on topics such as “gene editing” , “genetic engineering” , and “transgene” .</p>
+<p>In this task, you need to implement a series of processes from background investigation to collecting data to determining the solution to implementing the algorithm to get the results.</p>
+<p><strong>Requirements :</strong></p>
+<p><strong>About training:</strong></p>
+<ol type="1">
+<li>You can use any algorithm that you know, supervised learning and unsupervised learning are both ok.</li>
+<li>You can use any data resource. You need to find your own data resources such as some corpus or lexical resource.</li>
+<li>You can not directly use complete models that others have already trained to do classification without any detailed process.</li>
+<li>You can use some basic word vector models to build your algorithm, such as word2vec.</li>
+</ol>
+<p><strong>About testing:</strong></p>
+<ol type="1">
+<li>You need to collect 100 pieces of news/comments/articles related to the above topic, then use your algorithm or model to divide them into two categories——positive or negative. (You may need some knowledge of Crawler, in Python, BeautifulSoup is a very useful crawler tool.)</li>
+<li>You can get the test text from any website or social media.</li>
+<li>The text you collect must be in English .</li>
+</ol>
+<p><strong>Submissions:</strong></p>
+<ol type="1">
+<li>Please write down your algorithm details and all links of the model/data resources you used in the Q5_readme.pdf . If your code refer to any blog, github, paper and so on, please write the their links in it.</li>
+<li>Please put all the code of this question in the Q5_code folder.</li>
+<li>You need submit Q5_output.csv. Your .csv file should contain 3 columns as shown below. In “Result”, 0 represents negative and 1 represents positive. ID Contents Result</li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Contents</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>text0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>text1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr class="even">
+<td>99</td>
+<td>text99</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<ol start="4" type="1">
+<li>Put all files/folders above in folder Q5 .</li>
+</ol>
+<p><strong>Notes:</strong></p>
+<ol type="1">
+<li><p>Crawler is not required and will be not included in the scoring criteria. You can also get the text manually or by other tools.</p></li>
+<li><p>Your grade will be based on your report, code and accuracy of the results.</p></li>
+</ol>
+<hr>
+<p>Let’s tackle Q5, which involves performing sentiment analysis and opinion mining on 100 pieces of news, comments, or articles related to the topic of “genetic editing” and “transgenic” babies. The goal is to classify each piece of text as positive (1) or negative (0) in terms of sentiment, output the results in a CSV file, and submit the code and report in a folder named <code>Q5</code>. We’ll use basic word vector models (e.g., word2vec) to build the algorithm, and since no training data is provided, we’ll use an unsupervised approach with a pre-trained model and a lexicon-based method. Additionally, we’ll need to collect the 100 pieces of text from the web.</p>
+<hr>
+<section id="step-1-understanding-the-problem" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-understanding-the-problem">Step 1: Understanding the Problem</h3>
+<ul>
+<li><strong>Task Description</strong>:
+<ul>
+<li>Perform sentiment analysis and opinion mining on 100 pieces of news, comments, or articles related to “genetic editing” and “transgenic” babies.</li>
+<li>Classify each piece as positive (1) or negative (0) based on sentiment.</li>
+<li>Output the results in <code>Q5_output.csv</code> with columns <code>ID</code>, <code>Contents</code>, and <code>Result</code>.</li>
+<li>Submit the code and report in <code>Q5_readme.pdf</code> in a folder named <code>Q5</code>.</li>
+</ul></li>
+<li><strong>Constraints</strong>:
+<ul>
+<li>Use any algorithm (supervised or unsupervised).</li>
+<li>Use basic word vector models like word2vec.</li>
+<li>Do not use complete pre-trained models for classification (e.g., BERT for sentiment analysis).</li>
+<li>Collect the 100 pieces of text from the web (news, comments, articles).</li>
+<li>Two categories: Positive or Negative (binary classification).</li>
+</ul></li>
+<li><strong>Submission</strong>:
+<ul>
+<li><code>Q5_readme.pdf</code>: Code, model/data resources used, and links to the 100 pieces of text.</li>
+<li><code>Q5_output.csv</code>: Results with <code>ID</code>, <code>Contents</code>, and <code>Result</code>.</li>
+<li>Place all files in the <code>Q5</code> folder.</li>
+</ul></li>
+</ul>
+<section id="approach" class="level4">
+<h4 class="anchored" data-anchor-id="approach">Approach</h4>
+<p>Since no training data is provided, we’ll use an <strong>unsupervised sentiment analysis</strong> approach combining: 1. <strong>Word2Vec</strong>: To represent words as vectors and capture semantic meaning. 2. <strong>Sentiment Lexicon</strong>: Use a pre-existing sentiment lexicon (e.g., VADER or SentiWordNet) to assign sentiment scores to words. 3. <strong>Aggregation</strong>: Compute an overall sentiment score for each piece of text by averaging the sentiment scores of its words, weighted by their word2vec representations.</p>
+<p>We’ll also need to collect 100 pieces of text related to “genetic editing” and “transgenic” babies from the web.</p>
+<hr>
+</section>
+</section>
+<section id="step-2-collecting-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-collecting-the-data">Step 2: Collecting the Data</h3>
+<p>We need to collect 100 pieces of news, comments, or articles related to “genetic editing” and “transgenic” babies. Since I can’t directly scrape the web in this environment, I’ll provide a strategy to collect the data and list some example links that you can use. You can use a web scraping tool like <code>BeautifulSoup</code> or manually collect the data.</p>
+<section id="step-2.1-strategy-to-collect-data" class="level4">
+<h4 class="anchored" data-anchor-id="step-2.1-strategy-to-collect-data">Step 2.1: Strategy to Collect Data</h4>
+<ol type="1">
+<li><strong>Search Queries</strong>:
+<ul>
+<li>Use Google Search with queries like:
+<ul>
+<li>“genetic editing babies news”</li>
+<li>“transgenic babies comments”</li>
+<li>“CRISPR genetic editing opinions”</li>
+<li>“genetic engineering babies articles”</li>
+</ul></li>
+<li>Use social media platforms like X with hashtags such as <code>#GeneticEditing</code>, <code>#TransgenicBabies</code>, <code>#CRISPR</code>.</li>
+</ul></li>
+<li><strong>Sources</strong>:
+<ul>
+<li>News websites: BBC, The Guardian, CNN, Nature, Science Daily.</li>
+<li>Social media: X posts, Reddit threads (e.g., r/science, r/technology).</li>
+<li>Blogs and forums: Medium, science blogs.</li>
+</ul></li>
+<li><strong>Tools</strong>:
+<ul>
+<li>Use Python with <code>requests</code> and <code>BeautifulSoup</code> to scrape news articles.</li>
+<li>Use the <code>tweepy</code> library to collect posts from X.</li>
+<li>Manually copy comments from article comment sections or forums.</li>
+</ul></li>
+</ol>
+</section>
+<section id="step-2.2-example-links-to-newscommentsarticles" class="level4">
+<h4 class="anchored" data-anchor-id="step-2.2-example-links-to-newscommentsarticles">Step 2.2: Example Links to News/Comments/Articles</h4>
+<p>Here are some example links to news articles and comments related to “genetic editing” and “transgenic” babies. These are based on publicly available sources as of my last update (March 2023). You’ll need to collect 100 pieces, so you can use these as a starting point and search for more.</p>
+<ol type="1">
+<li><strong>News Articles</strong>:
+<ul>
+<li>“Chinese scientist claims to have created world’s first genetically edited babies” (CNN, 2018):<br>
+<a href="https://www.cnn.com/2018/11/26/health/china-crispr-babies-first/index.html">https://www.cnn.com/2018/11/26/health/china-crispr-babies-first/index.html</a></li>
+<li>“Genetically edited babies: What happened to the CRISPR twins?” (BBC, 2022):<br>
+<a href="https://www.bbc.com/news/world-asia-64154628">https://www.bbc.com/news/world-asia-64154628</a></li>
+<li>“The ethical dilemmas of genetically editing babies” (The Guardian, 2019):<br>
+<a href="https://www.theguardian.com/science/2019/jan/15/the-ethical-dilemmas-of-genetically-editing-babies">https://www.theguardian.com/science/2019/jan/15/the-ethical-dilemmas-of-genetically-editing-babies</a></li>
+<li>“CRISPR babies: What does this mean for the future of genetic engineering?” (Nature, 2019):<br>
+<a href="https://www.nature.com/articles/d41586-019-00673-1">https://www.nature.com/articles/d41586-019-00673-1</a></li>
+<li>“Genetically modified babies: A second Chinese researcher may have edited embryos” (Science, 2019):<br>
+<a href="https://www.science.org/content/article/genetically-modified-babies-second-chinese-researcher-may-have-edited-embryos">https://www.science.org/content/article/genetically-modified-babies-second-chinese-researcher-may-have-edited-embryos</a></li>
+</ul></li>
+<li><strong>Comments/Posts</strong> (Hypothetical, based on typical X posts):
+<ul>
+<li>X Post: “Genetic editing of babies is a dangerous step. We’re playing God and it’s going to backfire. #CRISPR” (Negative sentiment)</li>
+<li>X Post: “Transgenic babies could end genetic diseases! This is a huge step forward for humanity. #GeneticEditing” (Positive sentiment)</li>
+<li>Reddit Comment (r/science): “I’m worried about the ethical implications of CRISPR babies. Who decides what traits are ‘desirable’?” (Negative sentiment)</li>
+</ul></li>
+</ol>
+<p>To collect 100 pieces, you can: - Scrape news articles from the above sources. - Use the X API to collect posts with relevant hashtags. - Manually copy comments from the comment sections of news articles or Reddit threads.</p>
+</section>
+<section id="step-2.3-simulated-data-collection" class="level4">
+<h4 class="anchored" data-anchor-id="step-2.3-simulated-data-collection">Step 2.3: Simulated Data Collection</h4>
+<p>Since I can’t scrape the web here, I’ll simulate the data collection by creating a small sample of 5 pieces of text. You’ll need to expand this to 100 pieces using the strategy above.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulated data (replace with actual collected data)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>texts <span class="op">=</span> [</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Genetic editing of babies is a dangerous step. We’re playing God and it’s going to backfire."</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Transgenic babies could end genetic diseases! This is a huge step forward for humanity."</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"I’m worried about the ethical implications of CRISPR babies. Who decides what traits are desirable?"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"The potential of genetic editing is incredible. We can improve human health and longevity."</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"This is a slippery slope. Genetically modified babies will lead to a dystopian future."</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="step-3-implementing-sentiment-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-implementing-sentiment-analysis">Step 3: Implementing Sentiment Analysis</h3>
+<p>We’ll use an unsupervised approach combining word2vec for word embeddings and a sentiment lexicon (VADER) to assign sentiment scores. Here’s the plan: 1. <strong>Preprocess the Text</strong>: Tokenize, remove stopwords, and clean the text. 2. <strong>Load Word2Vec</strong>: Use a pre-trained word2vec model to get word embeddings. 3. <strong>Sentiment Lexicon</strong>: Use VADER to assign sentiment scores to words. 4. <strong>Compute Sentiment</strong>: Average the sentiment scores of words in each text, weighted by their word2vec embeddings. 5. <strong>Classify</strong>: If the average sentiment score is positive, classify as 1; otherwise, classify as 0.</p>
+<section id="step-3.1-install-required-libraries" class="level4">
+<h4 class="anchored" data-anchor-id="step-3.1-install-required-libraries">Step 3.1: Install Required Libraries</h4>
+<p>You’ll need to install the following libraries:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install gensim nltk vaderSentiment pandas numpy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="step-3.2-implement-the-sentiment-analysis-pipeline" class="level4">
+<h4 class="anchored" data-anchor-id="step-3.2-implement-the-sentiment-analysis-pipeline">Step 3.2: Implement the Sentiment Analysis Pipeline</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gensim.models <span class="im">import</span> KeyedVectors</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> nltk</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.tokenize <span class="im">import</span> word_tokenize</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.corpus <span class="im">import</span> stopwords</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> vaderSentiment.vaderSentiment <span class="im">import</span> SentimentIntensityAnalyzer</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shutil</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Download NLTK resources</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>nltk.download(<span class="st">'punkt'</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>nltk.download(<span class="st">'stopwords'</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Load pre-trained word2vec model (Google News vectors)</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: You need to download this file (~1.5GB) from:</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># https://code.google.com/archive/p/word2vec/ (GoogleNews-vectors-negative300.bin)</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Alternatively, use a smaller pre-trained model from gensim</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>word2vec_path <span class="op">=</span> <span class="st">"GoogleNews-vectors-negative300.bin"</span>  <span class="co"># Replace with your path</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>word2vec <span class="op">=</span> KeyedVectors.load_word2vec_format(word2vec_path, binary<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize VADER sentiment analyzer</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>analyzer <span class="op">=</span> SentimentIntensityAnalyzer()</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Preprocessing function</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>stop_words <span class="op">=</span> <span class="bu">set</span>(stopwords.words(<span class="st">'english'</span>))</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> preprocess_text(text):</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    tokens <span class="op">=</span> word_tokenize(text.lower())</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    tokens <span class="op">=</span> [t <span class="cf">for</span> t <span class="kw">in</span> tokens <span class="cf">if</span> t.isalpha() <span class="kw">and</span> t <span class="kw">not</span> <span class="kw">in</span> stop_words]</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> tokens</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute sentiment score for a piece of text</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_sentiment(text):</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    tokens <span class="op">=</span> preprocess_text(text)</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get sentiment scores for each token using VADER</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    sentiment_scores <span class="op">=</span> []</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> token <span class="kw">in</span> tokens:</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> token <span class="kw">in</span> word2vec:</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>            vs <span class="op">=</span> analyzer.polarity_scores(token)</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Use the compound score as the sentiment score</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>            sentiment_scores.append(vs[<span class="st">'compound'</span>])</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If no valid tokens, return neutral (0)</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> sentiment_scores:</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Average the sentiment scores</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>    avg_sentiment <span class="op">=</span> np.mean(sentiment_scores)</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Classify as positive (1) or negative (0)</span></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span> <span class="cf">if</span> avg_sentiment <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> <span class="dv">0</span></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply sentiment analysis to all texts</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>ids <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="bu">len</span>(texts)))</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> [compute_sentiment(text) <span class="cf">for</span> text <span class="kw">in</span> texts]</span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the output DataFrame</span></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>output_df <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>    <span class="st">'ID'</span>: ids,</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Contents'</span>: texts,</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Result'</span>: results</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a><span class="co"># Save to CSV</span></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>output_df.to_csv(<span class="st">'Q5_output.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>Preprocessing</strong>: Tokenize the text, convert to lowercase, remove stopwords, and keep only alphabetic tokens.</li>
+<li><strong>Word2Vec</strong>: Load a pre-trained word2vec model (Google News vectors) to check if words are in the vocabulary.</li>
+<li><strong>VADER</strong>: Use the VADER sentiment analyzer to get a compound sentiment score for each word.</li>
+<li><strong>Sentiment Computation</strong>: Average the sentiment scores of the words in each text. If the average is positive, classify as 1 (positive); otherwise, classify as 0 (negative).</li>
+<li><strong>Output</strong>: Save the results in <code>Q5_output.csv</code> with columns <code>ID</code>, <code>Contents</code>, and <code>Result</code>.</li>
+</ul>
+</section>
+<section id="step-3.3-example-output" class="level4">
+<h4 class="anchored" data-anchor-id="step-3.3-example-output">Step 3.3: Example Output</h4>
+<p>For the simulated data, the output might look like:</p>
+<pre><code>ID,Contents,Result
+0,"Genetic editing of babies is a dangerous step. We’re playing God and it’s going to backfire.",0
+1,"Transgenic babies could end genetic diseases! This is a huge step forward for humanity.",1
+2,"I’m worried about the ethical implications of CRISPR babies. Who decides what traits are desirable?",0
+3,"The potential of genetic editing is incredible. We can improve human health and longevity.",1
+4,"This is a slippery slope. Genetically modified babies will lead to a dystopian future.",0</code></pre>
+<hr>
+</section>
+</section>
+<section id="step-4-package-the-submission" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-package-the-submission">Step 4: Package the Submission</h3>
+<p>We need to submit the code, report, and output in a folder named <code>Q5</code>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create Q5 folder</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">'Q5'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Move the output CSV</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>shutil.move(<span class="st">'Q5_output.csv'</span>, <span class="st">'Q5/Q5_output.csv'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the code to a file (to be converted to PDF)</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'Q5/Q5_readme.py'</span>, <span class="st">'w'</span>) <span class="im">as</span> f:</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    f.write(<span class="st">"""</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="st"># Code for Q5: Sentiment Analysis and Opinion Mining</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="st">import numpy as np</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="st">import pandas as pd</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="st">from gensim.models import KeyedVectors</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="st">import nltk</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="st">from nltk.tokenize import word_tokenize</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="st">from nltk.corpus import stopwords</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="st">from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="st">import os</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="st">import shutil</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="st"># Download NLTK resources</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="st">nltk.download('punkt')</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="st">nltk.download('stopwords')</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="st"># Load pre-trained word2vec model</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="st">word2vec_path = "GoogleNews-vectors-negative300.bin"</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="st">word2vec = KeyedVectors.load_word2vec_format(word2vec_path, binary=True)</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="st"># Initialize VADER sentiment analyzer</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="st">analyzer = SentimentIntensityAnalyzer()</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="st"># Preprocessing function</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="st">stop_words = set(stopwords.words('english'))</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="st">def preprocess_text(text):</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="st">    tokens = word_tokenize(text.lower())</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="st">    tokens = [t for t in tokens if t.isalpha() and t not in stop_words]</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="st">    return tokens</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a><span class="st"># Compute sentiment score for a piece of text</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="st">def compute_sentiment(text):</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a><span class="st">    tokens = preprocess_text(text)</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="st">    # Get sentiment scores for each token using VADER</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="st">    sentiment_scores = []</span></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a><span class="st">    for token in tokens:</span></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a><span class="st">        if token in word2vec:</span></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a><span class="st">            vs = analyzer.polarity_scores(token)</span></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a><span class="st">            sentiment_scores.append(vs['compound'])</span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="st">    # If no valid tokens, return neutral (0)</span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a><span class="st">    if not sentiment_scores:</span></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="st">        return 0</span></span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a><span class="st">    # Average the sentiment scores</span></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="st">    avg_sentiment = np.mean(sentiment_scores)</span></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a><span class="st">    # Classify as positive (1) or negative (0)</span></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a><span class="st">    return 1 if avg_sentiment &gt; 0 else 0</span></span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a><span class="st"># Simulated data (replace with actual collected data)</span></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a><span class="st">texts = [</span></span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a><span class="st">    "Genetic editing of babies is a dangerous step. We’re playing God and it’s going to backfire.",</span></span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a><span class="st">    "Transgenic babies could end genetic diseases! This is a huge step forward for humanity.",</span></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a><span class="st">    "I’m worried about the ethical implications of CRISPR babies. Who decides what traits are desirable?",</span></span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a><span class="st">    "The potential of genetic editing is incredible. We can improve human health and longevity.",</span></span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a><span class="st">    "This is a slippery slope. Genetically modified babies will lead to a dystopian future."</span></span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a><span class="st">]</span></span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a><span class="st"># Apply sentiment analysis to all texts</span></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a><span class="st">ids = list(range(len(texts)))</span></span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a><span class="st">results = [compute_sentiment(text) for text in texts]</span></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a><span class="st"># Create the output DataFrame</span></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a><span class="st">output_df = pd.DataFrame({</span></span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a><span class="st">    'ID': ids,</span></span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a><span class="st">    'Contents': texts,</span></span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a><span class="st">    'Result': results</span></span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a><span class="st">})</span></span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a><span class="st"># Save to CSV</span></span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a><span class="st">output_df.to_csv('Q5_output.csv', index=False)</span></span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a><span class="st"># Create Q5 folder</span></span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a><span class="st">os.makedirs('Q5', exist_ok=True)</span></span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a><span class="st"># Move the output CSV</span></span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a><span class="st">shutil.move('Q5_output.csv', 'Q5/Q5_output.csv')</span></span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>Note</strong>: The question asks for <code>Q5_readme.pdf</code>, so you’ll need to convert the code and report to PDF format manually. Include the code, model/data resources, and links to the 100 pieces of text in the PDF.</li>
+</ul>
+<hr>
+</section>
+<section id="step-5-write-the-report" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-write-the-report">Step 5: Write the Report</h3>
+<p>The report (<code>Q5_readme.pdf</code>) should include the code, model/data resources used, and links to the 100 pieces of text.</p>
+<section id="report-content" class="level4">
+<h4 class="anchored" data-anchor-id="report-content">Report Content</h4>
+<ol type="1">
+<li><strong>Introduction</strong>:
+<ul>
+<li>The task is to perform sentiment analysis and opinion mining on 100 pieces of news, comments, or articles related to “genetic editing” and “transgenic” babies.</li>
+<li>Classify each piece as positive (1) or negative (0) based on sentiment.</li>
+</ul></li>
+<li><strong>Data Collection</strong>:
+<ul>
+<li>Collected 100 pieces of text from news websites, social media, and forums.</li>
+<li>Example links (replace with your actual 100 links):
+<ul>
+<li>[Link 1: CNN article]</li>
+<li>[Link 2: BBC article]</li>
+<li>[Link 3: X post]</li>
+<li>…</li>
+</ul></li>
+<li>Strategy: Used Google Search with queries like “genetic editing babies news” and collected comments from X and Reddit.</li>
+</ul></li>
+<li><strong>Methodology</strong>:
+<ul>
+<li><strong>Preprocessing</strong>: Tokenized the text, removed stopwords, and kept alphabetic tokens.</li>
+<li><strong>Word2Vec</strong>: Used a pre-trained word2vec model (Google News vectors) to check word validity.</li>
+<li><strong>Sentiment Lexicon</strong>: Used VADER to assign sentiment scores to words.</li>
+<li><strong>Sentiment Computation</strong>: Averaged the sentiment scores of words in each text. Classified as positive (1) if the average score is positive, otherwise negative (0).</li>
+<li><strong>Libraries</strong>:
+<ul>
+<li><code>gensim</code>: For word2vec.</li>
+<li><code>nltk</code>: For text preprocessing.</li>
+<li><code>vaderSentiment</code>: For sentiment scoring.</li>
+<li><code>pandas</code>, <code>numpy</code>: For data handling.</li>
+</ul></li>
+</ul></li>
+<li><strong>Model/Data Resources</strong>:
+<ul>
+<li><strong>Word2Vec Model</strong>: Google News vectors (300-dimensional), downloaded from <a href="https://code.google.com/archive/p/word2vec/">https://code.google.com/archive/p/word2vec/</a>.</li>
+<li><strong>VADER Lexicon</strong>: Built into the <code>vaderSentiment</code> library.</li>
+</ul></li>
+<li><strong>Results</strong>:
+<ul>
+<li><p>Output saved in <code>Q5_output.csv</code> with columns <code>ID</code>, <code>Contents</code>, and <code>Result</code>.</p></li>
+<li><p>Example output (first 5 rows):</p>
+<pre><code>ID,Contents,Result
+0,"Genetic editing of babies is a dangerous step. We’re playing God and it’s going to backfire.",0
+1,"Transgenic babies could end genetic diseases! This is a huge step forward for humanity.",1
+2,"I’m worried about the ethical implications of CRISPR babies. Who decides what traits are desirable?",0
+3,"The potential of genetic editing is incredible. We can improve human health and longevity.",1
+4,"This is a slippery slope. Genetically modified babies will lead to a dystopian future.",0</code></pre></li>
+</ul></li>
+<li><strong>Code</strong>:
+<ul>
+<li>[Include the entire code from above]</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="final-submission" class="level3">
+<h3 class="anchored" data-anchor-id="final-submission">Final Submission</h3>
+<p>Your submission folder <code>Q5</code> should contain: - <code>Q5_readme.pdf</code>: The report with the code, model/data resources, and links to the 100 pieces of text. - <code>Q5_output.csv</code>: The results with 100 rows.</p>
+<p><strong>Folder Structure</strong>:</p>
+<pre><code>Q5/
+├── Q5_readme.pdf
+└── Q5_output.csv</code></pre>
+<p>To create the PDF: 1. Copy the report content above into a document editor. 2. Include the actual links to the 100 pieces of text you collected. 3. Format it for clarity (e.g., use headings, bullet points). 4. Export the document as a PDF named <code>Q5_readme.pdf</code>. 5. Place the PDF and <code>Q5_output.csv</code> in the <code>Q5</code> folder.</p>
+<hr>
+</section>
+<section id="notes-and-potential-improvements" class="level3">
+<h3 class="anchored" data-anchor-id="notes-and-potential-improvements">Notes and Potential Improvements</h3>
+<ol type="1">
+<li><strong>Data Collection</strong>: The simulated data only includes 5 pieces. You’ll need to collect 100 pieces using the strategy provided.</li>
+<li><strong>Sentiment Analysis</strong>: The current approach uses a simple averaging of word-level sentiment scores. You could improve this by:
+<ul>
+<li>Using sentence-level sentiment analysis (e.g., VADER on the entire text).</li>
+<li>Incorporating negation handling (e.g., “not good” should be negative).</li>
+<li>Using a more sophisticated aggregation method, such as weighting words by their TF-IDF scores.</li>
+</ul></li>
+<li><strong>Evaluation</strong>: Since no ground truth labels are provided, you can manually inspect a few results to validate the model’s performance.</li>
+</ol>
+<p>If you need help with web scraping or further improvements, let me know!</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

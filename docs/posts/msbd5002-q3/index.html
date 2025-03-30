@@ -154,8 +154,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="q3.-data-augmentation-5-points" class="level2">
-<h2 class="anchored" data-anchor-id="q3.-data-augmentation-5-points">Q3. Data Augmentation (5 points)</h2>
+<section id="q3.-data-augmentation-5-points" class="level1">
+<h1>Q3. Data Augmentation (5 points)</h1>
 <p>We all know that adequate training data is a precondition for training machine learning models. But in real-world problems, the data that can be used to train the model is often not enough. Suppose you are doing a classification task and your training dataset is extremely insufficient. Please explain how you will expand the amount of data.</p>
 <p><strong>Notes :</strong></p>
 <p>You do NOT need to code in this question, but you need to answer in detail. Please give at least two specific examples to illustrate, such as image classification, text classification and so on. You can also refer to other materials to answer this question, if you do so, please also list your references.</p>
@@ -373,7 +373,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/twtang\.github\.io\/blog\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
