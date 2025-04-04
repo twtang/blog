@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="TW">
+<meta name="dcterms.date" content="2025-04-04">
+
+<title>EMLP-IJCNLP 2019 – Blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">EMLP-IJCNLP 2019</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">work</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>TW </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 4, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="blog-post-day-1-at-emnlp-ijcnlp-2019-a-packed-sunday-of-nlp-insights" class="level3">
+<h3 class="anchored" data-anchor-id="blog-post-day-1-at-emnlp-ijcnlp-2019-a-packed-sunday-of-nlp-insights">Blog Post: Day 1 at EMNLP-IJCNLP 2019 – A Packed Sunday of NLP Insights</h3>
+<p><em>Sunday, November 3, 2019 – First Day of the Conference</em></p>
+<p>I had the privilege of attending the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP) in Hong Kong. Day 1 was a whirlwind of sessions spanning annotation challenges, fact-checking, clinical NLP, and more. Below are my reflections based on the quick notes I jotted down during Sunday’s talks—perfect for jogging my memory later!</p>
+<hr>
+<section id="cross-document-annotation-tackling-cancer-references" class="level4">
+<h4 class="anchored" data-anchor-id="cross-document-annotation-tackling-cancer-references">9:00 – Cross-Document Annotation: Tackling Cancer References</h4>
+<p>The day kicked off with a session on cross-document annotation, using cancer-related terms as a case study (e.g., “resection” = “surgery”). The problem? Aligning terms across documents is messy when meanings shift subtly. Two solutions stood out:</p>
+<ol type="1">
+<li>Add a <strong>CONTAIN-SUBEVENT</strong> relation to model hierarchical events.<br>
+</li>
+<li>Rely on dictionary definitions over gut intuition for consistency.</li>
+</ol>
+<p>A stat that stuck with me: “whole-part” relations scored 0%, while “identical” terms hit 93%. Why not 100% for identical? It’s a hint that even synonyms aren’t as simple as they seem—context reigns supreme.</p>
+<hr>
+</section>
+<section id="fact-checking-automation-interpretability-and-bias" class="level4">
+<h4 class="anchored" data-anchor-id="fact-checking-automation-interpretability-and-bias">11:00 – Fact-Checking: Automation, Interpretability, and Bias</h4>
+<p>Next was a dive into automated fact-checking—a hot topic given fake news debates. The goal: a fast, interpretable system that handles multimodal data (text, images, videos) and multiple languages. Bias was a big concern—systems can unintentionally favor or discriminate against groups.</p>
+<p>Two approaches caught my eye:</p>
+<ol type="1">
+<li><strong>Hierarchical Stance Detection Model</strong>:
+<ul>
+<li>Asks: Does this evidence support the claim? Options: <em>agree</em>, <em>disagree</em>, <em>discuss</em>, or <em>unrelated</em>.<br>
+</li>
+<li>Uses a relatedness layer feeding into a stance layer, with KL divergence as the loss function.<br>
+</li>
+<li>Combines two weighted classification losses and MMD (Maximum Mean Discrepancy) regularization to address class imbalance.</li>
+</ul></li>
+<li><strong>Reply-Aided Misinformation Detection</strong>:
+<ul>
+<li>Integrates claims and replies to generate a probability distribution of veracity.<br>
+</li>
+<li>A Bayesian deep model with multiple Gaussian distributions (mean and variance) powers it.<br>
+</li>
+<li>Bi-LSTM encodes claim + reply, and an MLP predicts truthfulness, updating prior beliefs.</li>
+</ul></li>
+</ol>
+<p>Future work? Explainability, balancing bias vs.&nbsp;truth, and scaling to multimodal/multilingual data. Early detection remains elusive but critical.</p>
+<hr>
+</section>
+<section id="wikimedia-the-medical-info-hub" class="level4">
+<h4 class="anchored" data-anchor-id="wikimedia-the-medical-info-hub">11:45 – Wikimedia: The Medical Info Hub</h4>
+<p>This talk highlighted Wikimedia’s role as a top online medical resource. Tools like the <code>mediawiki-utilities</code> Python package and ORES (built with scikit-learn) help maintain it, but challenges persist: manual “citation needed” tags, circular reporting, and sock puppets (fake accounts). An RNN model was mentioned—maybe for quality scoring or spotting patterns? It’s a wild mix of NLP and crowdsourcing.</p>
+<hr>
+</section>
+<section id="fever-2.0-build-break-fix" class="level4">
+<h4 class="anchored" data-anchor-id="fever-2.0-build-break-fix">12:00 – FEVER 2.0: Build, Break, Fix</h4>
+<p>The FEVER 2.0 shared task was a three-part sprint:</p>
+<ul>
+<li><strong>12:00 – Overview</strong>: Build a fact-checking system, break it with adversarial attacks, then fix it.<br>
+</li>
+<li><strong>12:10 – Breaker</strong>: Adversarial attacks using GPT, with a past-encoder, present-decoder setup targeting context + claim pairs.<br>
+</li>
+<li><strong>12:20 – Fixer</strong>: Three fixes emerged:
+<ol type="1">
+<li>Handle multiple propositions (e.g., conjunctions) with multi-hop reasoning, filtering unverifiable claims.<br>
+</li>
+<li>Temporal reasoning via date manipulation and multi-hop logic.<br>
+</li>
+<li>Tackle ambiguity and lexical variation with entity disambiguation and lexical substitution.</li>
+</ol></li>
+</ul>
+<p>The fixer leaned on TF-IDF, pointer networks, and joint pointer networks, with post-processing for temporal data. A document-ranking task followed—wish I’d noted the winners!</p>
+<hr>
+</section>
+<section id="spanish-clinical-nlp-non-english-challenges" class="level4">
+<h4 class="anchored" data-anchor-id="spanish-clinical-nlp-non-english-challenges">14:00 – Spanish Clinical NLP: Non-English Challenges</h4>
+<p>This session focused on unstructured clinical data in Spanish, compared to English tools like cTAKES. A shared task targeted concept recognition (ICD, SNOMED) with annotated corpora. Highlights:</p>
+<ul>
+<li>Data from hospitals, libraries, and agencies (AEMPS).<br>
+</li>
+<li>Spanish-English MT with specialized parallel corpora.<br>
+</li>
+<li>Issues: Catalan-Spanish mix-ups, telegraphic sentences, manual labeling woes.</li>
+</ul>
+<p>CUTEXT, TensorFlow, and NLTK powered the effort, with word and character embeddings. Explainable AI, data sharing, and bias in tabular lab data were flagged as next steps.</p>
+<hr>
+</section>
+<section id="ai-assisted-grading-with-rubrics" class="level4">
+<h4 class="anchored" data-anchor-id="ai-assisted-grading-with-rubrics">14:40 – AI-Assisted Grading with Rubrics</h4>
+<p>AI-assisted grading for essays and short answers was up next. Feature-based systems (n-grams, UMLS similarity) faced off against BERT (WordPiece, PubMed-trained). BERT didn’t crush it—simple linear classifiers held strong, suggesting it needs more data. Evaluation spanned note and offset levels—practical stuff for automating feedback.</p>
+<hr>
+</section>
+<section id="suicide-notes-nlp-for-mental-health" class="level4">
+<h4 class="anchored" data-anchor-id="suicide-notes-nlp-for-mental-health">15:05 – Suicide Notes: NLP for Mental Health</h4>
+<p>A sobering session on suicide and depression notes. A dilated LSTM with attention (skip connections for long-term dependencies) tackled texts up to 1,000 words. Visualizing high-attention words was a powerful touch—showing what the model “sees” in these heavy statements.</p>
+<hr>
+</section>
+<section id="clinical-concepts-beyond-lexical-matching" class="level4">
+<h4 class="anchored" data-anchor-id="clinical-concepts-beyond-lexical-matching">16:00 – Clinical Concepts: Beyond Lexical Matching</h4>
+<p>Using the MIMIC-III dataset, this talk contrasted conceptual vs.&nbsp;lexical analysis. Pseudo-sentences (split by line breaks) were tokenized with spaCy. SNOMED CT and LOINC guided terminology, but ECG reports had tons of docs yet few unique concepts. Shared concepts had high confidence, unlike case management and nutrition (low correlation). Embeddings caught template patterns, but metadata—like Social Security numbers—was a nightmare.</p>
+<hr>
+</section>
+<section id="umls-for-medical-entity-extraction" class="level4">
+<h4 class="anchored" data-anchor-id="umls-for-medical-entity-extraction">16:25 – UMLS for Medical Entity Extraction</h4>
+<p>Medical entity extraction with UMLS used I2B2 and MedMentions datasets (21 concepts). NCBI-BERT beat BERT BASE, especially in a concatenated general + medical model. Error analysis showed overlapping spans as a pain point—right label, wrong boundaries.</p>
+<hr>
+</section>
+<section id="icd-9-ontological-attention" class="level4">
+<h4 class="anchored" data-anchor-id="icd-9-ontological-attention">16:50 – ICD-9 Ontological Attention</h4>
+<p>ICD-9 coding is slow and error-prone, with highly imbalanced data. An ontological attention model (grandparent, parent, specific nodes) with active learning (human-in-the-loop) tackled it. F1 macro-average tracked performance, with dampening for imbalance. Ontology-driven attention feels like a smart evolution.</p>
+<hr>
+</section>
+<section id="tokenization-negation-and-speculation" class="level4">
+<h4 class="anchored" data-anchor-id="tokenization-negation-and-speculation">17:15 – Tokenization: Negation and Speculation</h4>
+<p>The day wrapped with negation and speculation detection. Regex is easy for basics, but pinpointing <em>which part</em> of a sentence matters is linguistic gold. GloVe, ELMo, and fine-tuned BERT (with POS, dependency paths, Bi-LSTM) powered it. Punctuation’s role stood out—small but mighty.</p>
+<hr>
+</section>
+</section>
+<section id="wrap-up" class="level3">
+<h3 class="anchored" data-anchor-id="wrap-up">Wrap-Up</h3>
+<p>Sunday was a marathon of NLP innovation—cross-document annotation, fact-checking, clinical applications, and beyond. Themes like multimodal/multilingual support, bias, and explainability kept popping up. I’m already excited for Day 2—Spanish pharma embeddings and graph models await! These notes will be my lifeline when I revisit EMNLP-IJCNLP 2019’s brilliance.</p>
+<hr>
+</section>
+<section id="blog-post-day-2-at-emnlp-ijcnlp-2019-mondays-nlp-deep-dive" class="level3">
+<h3 class="anchored" data-anchor-id="blog-post-day-2-at-emnlp-ijcnlp-2019-mondays-nlp-deep-dive">Blog Post: Day 2 at EMNLP-IJCNLP 2019 – Monday’s NLP Deep Dive</h3>
+<p><em>Monday, November 4, 2019 – Second Day of the Conference</em></p>
+<p>Day 2 of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP) in Hong Kong was a whirlwind of technical sessions. From Spanish pharmaceutical NLP to graph-based embeddings and multi-hop QA, Monday packed a punch. Here’s my recap based on the notes I scribbled down—perfect for revisiting later!</p>
+<hr>
+<section id="spanish-pharma-entity-embeddings" class="level4">
+<h4 class="anchored" data-anchor-id="spanish-pharma-entity-embeddings">9:10 – Spanish Pharma Entity Embeddings</h4>
+<p>The morning kicked off with a focus on Spanish pharmaceutical entity embeddings, targeting drugs like antibiotics. A manual annotation guideline guided the process, with a tagger normalizing drug names. BERT and NLTK were in play, but a lingering issue: no one seemed to double-check the Spanish linguistics. A reminder that language-specific nuances matter!</p>
+<hr>
+</section>
+<section id="pooled-contextual-embeddings" class="level4">
+<h4 class="anchored" data-anchor-id="pooled-contextual-embeddings">9:30 – Pooled Contextual Embeddings</h4>
+<p>Next up: pooled contextual embeddings—reproducible, efficient, and flexible. Using Flair and a Bi-LSTM-CRF setup, the approach leveraged Spanish Wikipedia for pooled embeddings. Byte-pair subword embeddings and specialized models like FastText and Wang2Vec added depth. It’s a clever way to balance context and scalability.</p>
+<hr>
+</section>
+<section id="vsp-pharma-ner-and-normalization" class="level4">
+<h4 class="anchored" data-anchor-id="vsp-pharma-ner-and-normalization">9:40 – VSP Pharma: NER and Normalization</h4>
+<p>The VSP Pharma talk tackled named entity recognition (NER) for drugs and medications, followed by concept normalization using a SNOMED CT search engine. SpaCy handled sentence splitting and word tokenization. A naive first pass picked concepts proportional to instance frequency, boosted by pretrained embeddings as features. Simple yet effective.</p>
+<hr>
+</section>
+<section id="ixamed-ner-with-flair" class="level4">
+<h4 class="anchored" data-anchor-id="ixamed-ner-with-flair">9:50 – Ixamed: NER with Flair</h4>
+<p>Ixamed built on a 50M-word Spanish Wikipedia corpus for NER, again normalizing to SNOMED CT. Levenshtein distance helped measure similarity—a practical touch for handling messy real-world data. Flair powered the system, showing its versatility in domain-specific tasks.</p>
+<hr>
+</section>
+<section id="nlnde-no-experts-needed" class="level4">
+<h4 class="anchored" data-anchor-id="nlnde-no-experts-needed">10:00 – NLNDE: No Experts Needed?</h4>
+<p>The “Neither Language Nor Domain Experts” (NLNDE) session from Bosch was intriguing. A Bi-LSTM-CRF with attention and a noisy channel approach used a CRF in BIO format (9 labels). Embeddings ranged from character and byte-pair to FastText, covering general and bio domains. Unlabeled docs fed the noisy channel—hinting that domain-specific tuning might not always be essential. Bold claim!</p>
+<hr>
+</section>
+<section id="deep-learning-for-pharmaconer" class="level4">
+<h4 class="anchored" data-anchor-id="deep-learning-for-pharmaconer">10:10 – Deep Learning for PharmaCoNER</h4>
+<p>The PharmaCoNER talk dove into deep learning: BERT encoded sentences, concatenated embeddings fed concept indexing, and a candidate selection method (CSM) narrowed options. An ablation study highlighted character embeddings and tokenization as critical (40% abbreviations, 20% SNOMED CT coverage). Joint learning tied it together—tokenization’s impact stood out.</p>
+<hr>
+</section>
+<section id="graph-word-embeddings-wordgraph2vec" class="level4">
+<h4 class="anchored" data-anchor-id="graph-word-embeddings-wordgraph2vec">11:00 – Graph Word Embeddings: WordGraph2Vec</h4>
+<p>This session blended linear text embeddings (Word2Vec, GloVe) with graph-based ones, introducing WordGraph2Vec. Built on Node2Vec and DeepWalk, it used random walks and transition probabilities to capture 1st- and 2nd-order proximity. Stopwords and low-frequency words were marked as “unknown.”</p>
+<p>Example: “The car is red” and “The car is hot” got noisy variants, but WordGraph2Vec stayed stable, correcting ~10% of Word2Vec’s errors. Syntax graphs added another layer—promising for analogy and doc classification tasks.</p>
+<hr>
+</section>
+<section id="multi-hop-qa-machine-reading-comprehension" class="level4">
+<h4 class="anchored" data-anchor-id="multi-hop-qa-machine-reading-comprehension">11:20 – Multi-Hop QA: Machine Reading Comprehension</h4>
+<p>Multi-hop question answering (QA) tackled info spanning two documents via graph-structured representations and doc-to-doc links. Prefiltering grabbed the <em>k</em> most relevant sentences (based on <em>m</em> similar words to the question). Supporting fact identification leaned on HotpotQA, with BERT experiments outperforming an RNN + attention baseline. Stanford’s coreference resolution tied it together—multi-hop’s complexity shone through.</p>
+<hr>
+</section>
+<section id="essentia-domain-specific-paraphrasing" class="level4">
+<h4 class="anchored" data-anchor-id="essentia-domain-specific-paraphrasing">11:40 – Essentia: Domain-Specific Paraphrasing</h4>
+<p>Essentia addressed domain-specific paraphrasing—same meaning, different expressions. Current methods need large annotated datasets and falter outside general domains (e.g., PPDB). This approach worked with few labeled pairs, building sentence graphs via word alignment (similar words, context evidence). A paraphrase generator followed.</p>
+<p>Tested on HotelQA and Snips, it boosted recall but had high false positives. Negation handling needs work—check the RIT GitHub for Essentia details later!</p>
+<hr>
+</section>
+<section id="layerwise-convolutional-graph-networks" class="level4">
+<h4 class="anchored" data-anchor-id="layerwise-convolutional-graph-networks">11:55 – Layerwise Convolutional Graph Networks</h4>
+<p>This talk explored interpretability in graph networks using layerwise relevance backpropagation. Weight contributions and adjacency matrices tracked node/edge relevance, validated on PubMed’s 20K RCT dataset. Occlusion (deleting edges) tested negative evidence—a neat way to trace network dynamics.</p>
+<hr>
+</section>
+<section id="mrqa-baidus-d-net" class="level4">
+<h4 class="anchored" data-anchor-id="mrqa-baidus-d-net">12:10 – MRQA: Baidu’s D-Net</h4>
+<p>The final session covered machine reading QA with Baidu’s D-Net, blending pretraining and fine-tuning (BERT, XLNet, ERNIE). Multi-task learning included masked language modeling (MLM), natural language inference (NLI), and paragraph ranking. Oddly, MTL didn’t boost paragraph ranking or NLI much. PaddleNLP and PaddlePaddle powered it—Baidu’s ecosystem in action.</p>
+<hr>
+</section>
+</section>
+<section id="reflections" class="level3">
+<h3 class="anchored" data-anchor-id="reflections">Reflections</h3>
+<p>Monday was a rollercoaster—Spanish pharma NLP dominated the morning, then graph embeddings, multi-hop QA, and paraphrasing took over. Recurring themes: domain specificity, embedding innovation, and the push for efficiency with less data. WordGraph2Vec’s stability and Essentia’s paraphrase graphs were highlights. Day 2 cemented why EMNLP-IJCNLP 2019 was worth the trip—can’t wait to dig into these ideas again!</p>
+<hr>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/twtang\.github\.io\/blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
